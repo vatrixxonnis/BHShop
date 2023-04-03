@@ -124,4 +124,9 @@ router.get('/users', async (req, res) => {
   })
     .catch(err => res.status(500).json({ error: err.message }))
 });
+
+router.post('/users', async (req, res) => {
+  console.log(req.body);
+});
+
 module.exports = router;

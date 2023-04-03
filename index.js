@@ -1,8 +1,5 @@
 const express = require('express');
 const app = express();
-
-const routes = require('./routes/router.js')
-app.use('/', routes)
 const port = 3100;
 
 app.use(express.static('public'));
@@ -29,6 +26,9 @@ app.use(
 
 const db = require('./config/db');
 db.connect();
+
+const routes = require('./routes/router.js')
+app.use('/', routes)
 
 app.listen(port, () => {
   console.log(`My server is listening on port ${port}`)
