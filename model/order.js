@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const order = new Schema({
-  _id: { type: String },
   order_id: { type: String },
   user_id: { type: String },
   order_date: { type: String },
