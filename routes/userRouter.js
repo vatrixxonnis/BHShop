@@ -76,7 +76,7 @@ userRouter.put("", async (req, res) => {
     });
 });
 
-userRouter.put("/pass", async (req, res) => {
+userRouter.put("/changePassword", async (req, res) => {
   user
     .findOneAndUpdate(
       { password: req.body.password, user_id: req.body.user_id },
