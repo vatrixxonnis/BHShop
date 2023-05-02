@@ -1,9 +1,10 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const userRouter = express.Router();
-
-// User
+const crypto = require("node:crypto");
 const user = require("../model/user");
+
+// Lấy thông tin tất cả người dùng
 userRouter.get("", async (req, res) => {
   user
     .find({})
@@ -13,27 +14,54 @@ userRouter.get("", async (req, res) => {
     .catch((err) => res.status(500).json({ error: err.message }));
 });
 
+// Đăng nhập
 userRouter.post("", async (req, res) => {
   let phone = req.body.phonenumber;
   let pass = req.body.password;
   user
-    .findOne({ phone_number: phone, password: pass })
+    .findOne({ phone_number: phone })
     .then((user) => {
       if (user) {
-        return res.send(user).status(200);
+        let salt = user.salt; // get salt from user object
+        let hash = crypto
+          .pbkdf2Sync(pass, salt, 1000, 64, `sha512`)
+          .toString(`hex`);
+        if (user.password === hash) {
+          return res
+            .send({
+              username: user.username,
+              email: user.email,
+              phone_number: user.phone_number,
+              first_name: user.first_name,
+              last_name: user.last_name,
+              gender: user.gender,
+              address: user.address,
+              payment_method_id: user.payment_method_id,
+              order_history: user.order_history,
+              cart_id: user.cart_id,
+            })
+            .status(200);
+        } else {
+          return res.sendStatus(404);
+        }
       } else {
-        return res.sendStatus(404);
+        res.sendStatus(404);
       }
     })
     .catch((err) => res.status(500).json({ error: err.message }));
 });
 
+// Đăng ký tài khoản
 userRouter.post("/regis", async (req, res) => {
-  console.log(req.body);
+  salt = crypto.randomBytes(16).toString("hex"); // create salt
+  hash = crypto
+    .pbkdf2Sync(req.body.password, salt, 1000, 64, `sha512`)
+    .toString(`hex`);
   let newUser = new user({
     email: req.body.email,
     gender: req.body.gender,
-    password: req.body.password,
+    password: hash,
+    salt: salt,
     phone_number: req.body.phone,
     first_name: req.body.firs_tname,
     last_name: req.body.last_name,
@@ -50,7 +78,9 @@ userRouter.post("/regis", async (req, res) => {
     .catch((err) => res.status(500).json({ error: err.message }));
 });
 
+// Cập nhật thông tin người dùng
 userRouter.put("", async (req, res) => {
+  if (req.body.name == null) return res.sendStatus(404);
   let full_name = req.body.name.trim().split(" ");
   let first_name = full_name.pop();
   let last_name = full_name.join(" ");
@@ -76,23 +106,38 @@ userRouter.put("", async (req, res) => {
     });
 });
 
+// Thay đổi mật khẩu
 userRouter.put("/changePassword", async (req, res) => {
-  user
-    .findOneAndUpdate(
-      { password: req.body.password, user_id: req.body.user_id },
-      { $set: { password: req.body.newpass } }
-    )
-    .then((user) => {
-      if (user) {
-        return res.sendStatus(200);
-      } else {
-        return res.sendStatus(404);
-      }
-    });
+  user.findOne({ phone_number: req.body.phone_number }).then((oneUser) => {
+    if (oneUser) {
+      let salt = oneUser.salt; // create salt
+      let hash = crypto
+        .pbkdf2Sync(req.body.password, salt, 1000, 64, `sha512`)
+        .toString(`hex`);
+      let newhash = crypto
+        .pbkdf2Sync(req.body.newpass, salt, 1000, 64, `sha512`)
+        .toString(`hex`);
+      user
+        .findOneAndUpdate(
+          { phone_number: oneUser.phone_number, password: hash },
+          { $set: { password: newhash } }
+        )
+        .then((user) => {
+          if (user) {
+            return res.sendStatus(200);
+          } else {
+            return res.sendStatus(404);
+          }
+        });
+    } else {
+      return res.sendStatus(404);
+    }
+  });
 });
 
+// Xóa người dùng
 userRouter.delete("", async (req, res) => {
-  console.log(req.body);
+  return res.sendStatus(404);
 });
 
 module.exports = userRouter;
