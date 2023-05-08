@@ -5,6 +5,14 @@ const orderRouter = express.Router();
 // Order
 const order = require("../model/order");
 const orderDetail = require("../model/orderDetail");
+orderRouter.get("", async (req, res) => {
+  order
+    .find({})
+    .then((orders) => {
+      return res.json(orders);
+    })
+    .catch((err) => res.status(500).json({ error: err.message }));
+});
 
 orderRouter.post("", async (req, res) => {
   order
@@ -18,7 +26,7 @@ orderRouter.post("", async (req, res) => {
 orderRouter.post("/detail", async (req, res) => {
   console.log(req.body);
   orderDetail
-    .find({ order_id : req.body.order_id })
+    .find({ order_id: req.body.order_id })
     .then((data) => {
       return res.send(data);
     })
