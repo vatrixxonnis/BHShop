@@ -4,7 +4,7 @@ const provinceRouter = express.Router();
 
 // TinhThanh
 const TinhThanh = require("../model/TinhThanh");
-provinceRouter.post("", async (req, res) => {
+provinceRouter.get("", async (req, res) => {
   await TinhThanh.find({})
     .then((provinces) => {
       for(let province of provinces) {

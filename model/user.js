@@ -9,6 +9,7 @@ const user = new Schema(
     email: { type: String },
     gender: { type: String },
     password: { type: String },
+    salt: { type: String },
     first_name: { type: String },
     last_name: { type: String },
     address: { type: String },

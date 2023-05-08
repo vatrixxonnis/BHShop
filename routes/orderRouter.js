@@ -24,7 +24,6 @@ orderRouter.post("", async (req, res) => {
 });
 
 orderRouter.post("/detail", async (req, res) => {
-  console.log(req.body);
   orderDetail
     .find({ order_id: req.body.order_id })
     .then((data) => {
