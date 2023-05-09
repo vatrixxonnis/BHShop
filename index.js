@@ -1,10 +1,9 @@
 const express = require("express");
 const app = express();
 const port = 3100;
-
-app.use(express.static("public"));
-
+var crypto = require("crypto");
 const morgan = require("morgan");
+app.use(express.static("public"));
 app.use(morgan("combined"));
 
 const cors = require("cors");
@@ -38,6 +37,7 @@ const paymentRoutes = require("./routes/paymentRouter.js");
 const districtRoutes = require("./routes/districtRouter.js");
 const provinceRoutes = require("./routes/provinceRouter.js");
 const wardRoutes = require("./routes/wardRouter.js");
+const reviewRoutes = require("./routes/reviewRouter");
 app.use("/", routes);
 app.use("/products", productRoutes);
 app.use("/users", userRoutes);
@@ -49,8 +49,16 @@ app.use("/payments", paymentRoutes);
 app.use("/districts", districtRoutes);
 app.use("/provinces", provinceRoutes);
 app.use("/wards", wardRoutes);
+app.use("/reviews", reviewRoutes);
 // // Import middleware
 // const accessLogsMiddleware = require("./middleware/accessLog");
+// const salt = crypto.randomBytes(16).toString("hex"); // create salt
+// const hash = crypto
+//   .pbkdf2Sync("BHShop123@", salt, 1000, 64, "sha512")
+//   .toString("hex");
+
+// console.log("Salt:", salt);
+// console.log("Hash:", hash);
 
 // // Apply middleware
 // app.use(accessLogsMiddleware);

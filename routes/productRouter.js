@@ -4,14 +4,13 @@ const productRouter = express.Router();
 
 // Products
 const product = require("../model/product");
-
 productRouter.get("", async (req, res) => {
-  product
-    .find({})
-    .then((products) => {
-      return res.json(products);
-    })
-    .catch((err) => res.status(500).json({ error: err.message }));
+  try {
+    const products = await product.find({}).sort({ created_date: -1 });
+    res.json(products);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 });
 
 productRouter.get("/:id", (req, res) => {
@@ -28,21 +27,19 @@ productRouter.post("", async (req, res) => {
     .then((product) => res.json(product))
     .catch((err) => res.status(500).json({ error: err.message }));
 });
-
 productRouter.put("/:id", async (req, res) => {
-  let o_id = new mongoose.Types.ObjectId(req.params.id);
-  const response = await product
-    .findOneAndUpdate(
-      { _id: o_id },
-      {
-        $set: {
-          name: req.body.name,
-          description: req.body.description,
-        },
-      }
-    )
-    .then((product) => res.json(product))
-    .catch((err) => res.status(500).json({ error: err.message }));
+  try {
+    const { id } = req.params;
+    const productData = req.body;
+    const updatedProduct = await product.findOneAndUpdate(
+      { _id: id },
+      productData,
+      { new: true }
+    );
+    res.json(updatedProduct);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 });
 
 productRouter.delete("/:id", async (req, res) => {

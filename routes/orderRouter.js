@@ -6,12 +6,27 @@ const orderRouter = express.Router();
 const order = require("../model/order");
 const orderDetail = require("../model/orderDetail");
 orderRouter.get("", async (req, res) => {
-  order
-    .find({})
-    .then((orders) => {
-      return res.json(orders);
-    })
-    .catch((err) => res.status(500).json({ error: err.message }));
+  try {
+    const orders = await order.find({});
+
+    res.json(orders);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+orderRouter.get("/:id", async (req, res) => {
+  try {
+    const orderId = req.params.id;
+    const orderData = await order.findById(orderId);
+
+    if (!orderData) {
+      return res.status(404).json({ error: "Order not found" });
+    }
+
+    res.json(orderData);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
 });
 
 orderRouter.post("", async (req, res) => {

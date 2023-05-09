@@ -3,8 +3,8 @@ const Schema = mongoose.Schema;
 
 const user = new Schema(
   {
-    _id: { type: String },
     user_id: { type: String },
+    user_type: { type: String },
     username: { type: String },
     email: { type: String },
     gender: { type: String },
@@ -16,6 +16,8 @@ const user = new Schema(
     phone_number: { type: String },
     payment_method_id: { type: String },
     cart_id: { type: String },
+    birth_date: { type: String },
+    status: { type: String },
   },
   { versionKey: false }
 );

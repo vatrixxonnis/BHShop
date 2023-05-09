@@ -1,11 +1,11 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const order = new Schema({
-  order_id: { type: String },
-  user_id: { type: String },
+  _id: { type: String },
+  customer_id: { type: String },
   order_date: { type: String },
-  order_status: { type: String },
+  status: { type: String },
   shipping_address: { type: Array },
   billing_address: { type: Array },
   payment_method: { type: String },
@@ -22,4 +22,5 @@ const order = new Schema({
   is_gift: { type: Boolean },
   gift_message: { type: String },
 });
-module.exports = mongoose.model('order', order, 'Order');
+
+module.exports = mongoose.model("order", order, "Order");
