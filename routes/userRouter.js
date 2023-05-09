@@ -18,7 +18,7 @@ userRouter.get("", async (req, res) => {
 userRouter.post("", async (req, res) => {
   let phone = req.body.phonenumber;
   let pass = req.body.password;
-  user
+  await user
     .findOne({ phone_number: phone })
     .then((user) => {
       if (user) {
@@ -29,23 +29,23 @@ userRouter.post("", async (req, res) => {
         if (user.password === hash) {
           return res
             .send({
-              username: user.username,
-              email: user.email,
-              phone_number: user.phone_number,
+              user_id: user.user_id,
+              user_type: user.user_type,
               first_name: user.first_name,
               last_name: user.last_name,
+              username: user.username,
+              email: user.email,
               gender: user.gender,
-              address: user.address,
-              payment_method_id: user.payment_method_id,
-              order_history: user.order_history,
-              cart_id: user.cart_id,
+              phone_number: user.phone_number,
+              birth_date: user.birth_date,
+              status: user.status,
             })
             .status(200);
         } else {
           return res.sendStatus(404);
         }
       } else {
-        res.sendStatus(404);
+        res.sendStatus(401);
       }
     })
     .catch((err) => res.status(500).json({ error: err.message }));
@@ -137,7 +137,13 @@ userRouter.put("/changePassword", async (req, res) => {
 
 // Xóa người dùng
 userRouter.delete("", async (req, res) => {
-  return res.sendStatus(404);
+  user.findOneAndDelete({ phone_number: req.body.phone }).then((user) => {
+    if (user) {
+      return res.sendStatus(200);
+    } else {
+      return res.sendStatus(404);
+    }
+  });
 });
 
 module.exports = userRouter;

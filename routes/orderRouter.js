@@ -4,7 +4,6 @@ const orderRouter = express.Router();
 
 // Order
 const order = require("../model/order");
-const orderDetail = require("../model/orderDetail");
 
 orderRouter.post("", async (req, res) => {
   order

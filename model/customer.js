@@ -2,12 +2,11 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const customer = new Schema({
-  customer_id: { type: String },
-  gender: { type: Array },
-  name: { type: String },
-  email: { type: String },
-  phone: { type: String },
-  addresses: { type: Array },
-  birth_date: { type: String },
+user_id: { type: String },
+addresses: { type: Array },
+wishlist: { type: Array },
+order_history: { type: Array },
+cart: { type: Array },
+
 });
 module.exports = mongoose.model('customer', customer, 'Customer');
