@@ -13,6 +13,15 @@ customerRouter.get("", async (req, res) => {
     .catch((err) => res.status(500).json({ error: err.message }));
 });
 
+customerRouter.post("/user_id", async (req, res) => {
+  customer
+    .findOne({ user_id: req.body.user_id })
+    .then((customer) => {
+      return res.json(customer);
+    })
+    .catch((err) => res.status(500).json({ error: err.message }));
+});
+
 customerRouter.post("/wishlist", async (req, res) => {
   await customer
     .findOne({ user_id: req.body.user_id })
