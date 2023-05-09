@@ -187,7 +187,7 @@ userRouter.put("/changePassword", async (req, res) => {
 
 // Xóa người dùng
 userRouter.delete("/:id", async (req, res) => {
-  user.findOneAndDelete({ phone_number: req.body.phone }).then((user) => {
+  user.findOneAndDelete({ phone_number: req.body.phone }).then(async (user) => {
     if (user) {
       return res.sendStatus(200);
     } else {

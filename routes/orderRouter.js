@@ -5,7 +5,6 @@ const orderRouter = express.Router();
 
 // Order
 const order = require("../model/order");
-const orderDetail = require("../model/orderDetail");
 orderRouter.get("", async (req, res) => {
   try {
     const orders = await order.find({});

@@ -18,3 +18,6 @@ const product = new Schema({
   ingredients: { type: Array },
   storage_instructions: { type: String },
   created_date: { type: Date, default: Date.now },
+});
+
+module.exports = mongoose.model("product", product, "Product");
