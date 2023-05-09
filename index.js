@@ -1,20 +1,19 @@
-const express = require('express');
+const express = require("express");
 const app = express();
 const port = 3100;
-
-app.use(express.static('public'));
-
+var crypto = require("crypto");
 const morgan = require("morgan");
+app.use(express.static("public"));
 app.use(morgan("combined"));
 
-const cors = require('cors');
+const cors = require("cors");
 app.use(cors());
 
 const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const fileUpload = require('express-fileupload');
+const fileUpload = require("express-fileupload");
 app.use(
   fileUpload({
     limits: {
@@ -24,27 +23,45 @@ app.use(
   })
 );
 
-const db = require('./config/db');
+const db = require("./config/db");
 db.connect();
 
-const routes = require('./routes/router.js')
-const productRoutes = require('./routes/productRouter.js')
-const userRoutes = require('./routes/userRouter.js')
-const addressRoutes = require('./routes/addressRouter.js')
-const categoryRoutes = require('./routes/categoryRouter.js')
-const customerRoutes = require('./routes/customerRouter.js')
-const orderRoutes = require('./routes/orderRouter.js')
-const paymentRoutes = require('./routes/paymentRouter.js')
+const routes = require("./routes/router.js");
+const productRoutes = require("./routes/productRouter.js");
+const userRoutes = require("./routes/userRouter.js");
+const addressRoutes = require("./routes/addressRouter.js");
+const categoryRoutes = require("./routes/categoryRouter.js");
+const customerRoutes = require("./routes/customerRouter.js");
+const orderRoutes = require("./routes/orderRouter.js");
+const paymentRoutes = require("./routes/paymentRouter.js");
+const districtRoutes = require("./routes/districtRouter.js");
+const provinceRoutes = require("./routes/provinceRouter.js");
+const wardRoutes = require("./routes/wardRouter.js");
+const reviewRoutes = require("./routes/reviewRouter");
+app.use("/", routes);
+app.use("/products", productRoutes);
+app.use("/users", userRoutes);
+app.use("/addresses", addressRoutes);
+app.use("/categories", categoryRoutes);
+app.use("/customers", customerRoutes);
+app.use("/orders", orderRoutes);
+app.use("/payments", paymentRoutes);
+app.use("/districts", districtRoutes);
+app.use("/provinces", provinceRoutes);
+app.use("/wards", wardRoutes);
+app.use("/reviews", reviewRoutes);
+// // Import middleware
+// const accessLogsMiddleware = require("./middleware/accessLog");
+// const salt = crypto.randomBytes(16).toString("hex"); // create salt
+// const hash = crypto
+//   .pbkdf2Sync("BHShop123@", salt, 1000, 64, "sha512")
+//   .toString("hex");
 
-app.use('/', routes)
-app.use('/products', productRoutes)
-app.use('/users', userRoutes)
-app.use('/addresses', addressRoutes)
-app.use('/categories', categoryRoutes)
-app.use('/customers', customerRoutes)
-app.use('/orders', orderRoutes)
-app.use('/payments', paymentRoutes)
+// console.log("Salt:", salt);
+// console.log("Hash:", hash);
 
+// // Apply middleware
+// app.use(accessLogsMiddleware);
 app.listen(port, () => {
-  console.log(`My server is listening on port ${port}`)
-})
+  console.log(`My server is listening on port ${port}`);
+});

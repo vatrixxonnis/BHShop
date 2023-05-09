@@ -1,5 +1,6 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+const { ObjectId } = require("mongoose").Types;
 
 const product = new Schema({
   name: { type: String },
@@ -17,6 +18,3 @@ const product = new Schema({
   ingredients: { type: Array },
   storage_instructions: { type: String },
   created_date: { type: Date, default: Date.now },
-
-}, { versionKey: false });
-module.exports = mongoose.model('product', product, 'Product');

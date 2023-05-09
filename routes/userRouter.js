@@ -8,9 +8,18 @@ const user = require("../model/user");
 userRouter.get("", async (req, res) => {
   user
     .find({})
+    .sort({ user_type: 1 })
     .then((users) => {
       return res.json(users);
     })
+    .catch((err) => res.status(500).json({ error: err.message }));
+});
+// Lấy thông tin người dùng theo id
+userRouter.get("/:id", async (req, res) => {
+  let o_id = new mongoose.Types.ObjectId(req.params.id);
+  user
+    .findById(o_id)
+    .then((user) => res.json(user))
     .catch((err) => res.status(500).json({ error: err.message }));
 });
 
@@ -78,6 +87,28 @@ userRouter.post("/regis", async (req, res) => {
     .catch((err) => res.status(500).json({ error: err.message }));
 });
 
+// Đăng ký tài khoản
+userRouter.post("/register", async (req, res) => {
+  salt = crypto.randomBytes(16).toString("hex"); // create salt
+  hash = crypto
+    .pbkdf2Sync(req.body.password, salt, 1000, 64, `sha512`)
+    .toString(`hex`);
+  let newUser = new user({
+    ...req.body,
+    password: hash,
+    salt: salt,
+  });
+  user
+    .insertMany(newUser)
+    .then((user) => {
+      if (user) {
+        return res.sendStatus(200);
+      } else {
+        return res.sendStatus(404);
+      }
+    })
+    .catch((err) => res.status(500).json({ error: err.message }));
+});
 // Cập nhật thông tin người dùng
 userRouter.put("", async (req, res) => {
   if (req.body.name == null) return res.sendStatus(404);
@@ -105,7 +136,26 @@ userRouter.put("", async (req, res) => {
       }
     });
 });
-
+userRouter.put("/update/:id", async (req, res) => {
+  try {
+    salt = crypto.randomBytes(16).toString("hex"); // create salt
+    hash = crypto
+      .pbkdf2Sync(req.body.password, salt, 1000, 64, `sha512`)
+      .toString(`hex`);
+    const { id } = req.params;
+    const userData = new user({
+      ...req.body,
+      password: hash,
+      salt: salt,
+    });
+    const updatedUser = await user.findOneAndUpdate({ _id: id }, userData, {
+      new: true,
+    });
+    res.json(updatedUser);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
 // Thay đổi mật khẩu
 userRouter.put("/changePassword", async (req, res) => {
   user.findOne({ phone_number: req.body.phone_number }).then((oneUser) => {
@@ -136,12 +186,16 @@ userRouter.put("/changePassword", async (req, res) => {
 });
 
 // Xóa người dùng
-userRouter.delete("", async (req, res) => {
+userRouter.delete("/:id", async (req, res) => {
   user.findOneAndDelete({ phone_number: req.body.phone }).then((user) => {
     if (user) {
       return res.sendStatus(200);
     } else {
-      return res.sendStatus(404);
+      let o_id = new mongoose.Types.ObjectId(req.params.id);
+  const response = await user
+    .findByIdAndRemove(o_id)
+    .then((user) => res.json(user))
+    .catch((err) => res.status(500).json({ error: err.message }));
     }
   });
 });
