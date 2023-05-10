@@ -56,12 +56,10 @@ orderRouter.post("/add", async (req, res) => {
   for (let p of productsHolder) {
     p.product_id = new mongoose.Types.ObjectId(p.product_id);
   }
-  console.log(productsHolder);
   const newOrder = new order({
     _id: "BH" + uuid().slice(0, 10),
     customer_id: new mongoose.Types.ObjectId(req.body.customer_id),
     products: productsHolder,
-    order_status: req.body.order_status,
     status: req.body.status,
     shipping_address: req.body.shipping_address,
     payment_method: req.body.payment_method,
