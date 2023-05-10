@@ -7,8 +7,8 @@ const newsLetter = require('../model/newsLetter')
 newsLetterRouter.get("", async (req, res) => {
   newsLetter
     .find({})
-    .then((newsLetters) => {
-      return res.json(newsLetters);
+    .then((response) => {
+      return res.json(response);
     })
     .catch((err) => res.status(500).json({ error: err.message }));
 });
