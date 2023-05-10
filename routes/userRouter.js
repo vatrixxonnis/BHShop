@@ -196,19 +196,14 @@ userRouter.put("/changePassword", async (req, res) => {
   });
 });
 
-// Xóa người dùng
 userRouter.delete("/:id", async (req, res) => {
-  user.findOneAndDelete({ phone_number: req.body.phone }).then(async (user) => {
-    if (user) {
-      return res.sendStatus(200);
-    } else {
-      let o_id = new mongoose.Types.ObjectId(req.params.id);
-      const response = await user
-        .findByIdAndRemove(o_id)
-        .then((user) => res.json(user))
-        .catch((err) => res.status(500).json({ error: err.message }));
-    }
-  });
+  try {
+    const userId = req.params.id;
+    const response = await user.findByIdAndRemove(userId);
+    res.json(response);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
 });
 
 module.exports = userRouter;

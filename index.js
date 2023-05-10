@@ -35,6 +35,7 @@ const customerRoutes = require("./routes/customerRouter.js");
 const orderRoutes = require("./routes/orderRouter.js");
 const paymentRoutes = require("./routes/paymentRouter.js");
 const reviewRoutes = require("./routes/reviewRouter");
+const couponRouter = require("./routes/couponRouter");
 const newsRoutes = require("./routes/newsRouter.js");
 
 app.use("/", routes);
@@ -47,7 +48,8 @@ app.use("/orders", orderRoutes);
 app.use("/payments", paymentRoutes);
 app.use("/reviews", reviewRoutes);
 app.use("/newsletters", newsRoutes);
-// // Import middleware
+app.use("/coupons", couponRouter);
+// Import middleware
 // const accessLogsMiddleware = require("./middleware/accessLog");
 // const salt = crypto.randomBytes(16).toString("hex"); // create salt
 // const hash = crypto
@@ -57,7 +59,7 @@ app.use("/newsletters", newsRoutes);
 // console.log("Salt:", salt);
 // console.log("Hash:", hash);
 
-// // Apply middleware
+// Apply middleware
 // app.use(accessLogsMiddleware);
 app.listen(port, () => {
   console.log(`My server is listening on port ${port}`);

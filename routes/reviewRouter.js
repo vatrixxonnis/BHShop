@@ -1,5 +1,6 @@
 const express = require("express");
 const reviewRouter = express.Router();
+const mongoose = require("mongoose");
 const review = require("../model/review");
 const product = require("../model/product");
 const user = require("../model/user"); //
@@ -59,16 +60,13 @@ reviewRouter.get("/:id", async (req, res) => {
 
 // Xóa một review dựa trên ID
 reviewRouter.delete("/:id", async (req, res) => {
-  try {
-    const review = await review.findByIdAndRemove(req.params.id);
-    if (!review) {
-      return res.status(404).json({ error: "Review không tồn tại" });
-    }
-    return res.json(review);
-  } catch (err) {
-    return res.status(500).json({ error: err.message });
-  }
+  let o_id = new mongoose.Types.ObjectId(req.params.id);
+  const response = await review
+    .findByIdAndRemove(o_id)
+    .then((review) => res.json(review))
+    .catch((err) => res.status(500).json({ error: err.message }));
 });
+
 // Cập nhật review dựa trên ID
 reviewRouter.put("/:id", async (req, res) => {
   try {
@@ -86,6 +84,39 @@ reviewRouter.put("/:id", async (req, res) => {
       return res.status(404).json({ error: "Review không tồn tại" });
     }
 
+    return res.json(review);
+  } catch (err) {
+    return res.status(500).json({ error: err.message });
+  }
+});
+// Cập nhật review dựa trên ID
+reviewRouter.put("/:id/status", async (req, res) => {
+  try {
+    const reviewId = req.params.id;
+    const { label } = req.body;
+
+    // Kiểm tra xem review có tồn tại không
+    const existingReview = await review.findById(reviewId);
+    if (!existingReview) {
+      return res.status(404).json({ error: "Review not found" });
+    }
+
+    // Cập nhật trạng thái của review
+    existingReview.label = label;
+    const updatedReview = await existingReview.save();
+
+    res.json(updatedReview);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+// Xóa một review dựa trên ID
+reviewRouter.delete("/:id", async (req, res) => {
+  try {
+    const review = await review.findByIdAndRemove(req.params.id);
+    if (!review) {
+      return res.status(404).json({ error: "Review không tồn tại" });
+    }
     return res.json(review);
   } catch (err) {
     return res.status(500).json({ error: err.message });
