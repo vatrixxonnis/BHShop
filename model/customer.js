@@ -1,12 +1,13 @@
-const mongoose = require('mongoose');
+const { ObjectId } = require("mongodb");
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const customer = new Schema({
-user_id: { type: String },
-addresses: { type: Array },
-wishlist: { type: Array },
-order_history: { type: Array },
-cart: { type: Array },
-
+  _id: { type: ObjectId },
+  user_id: { type: String, required: true },
+  addresses: { type: Array , default: []},
+  wishlist: { type: Array , default: []},
+  order_history: { type: Array , default: []},
+  cart: { type: Array , default: []},
 });
-module.exports = mongoose.model('customer', customer, 'Customer');
+module.exports = mongoose.model("customer", customer, "Customer");

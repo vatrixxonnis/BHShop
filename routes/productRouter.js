@@ -61,7 +61,7 @@ productRouter.post("/name", async (req, res) => {
 productRouter.post("/allWithOnlyName", async (req, res) => {
   await product
     .find({})
-    .select({ name: 1, _id: 0 })
+    .select({ name: 1, _id: 1 })
     .then((product) => res.send(product))
     .catch((err) => res.status(500).json({ error: err.message }));
 });

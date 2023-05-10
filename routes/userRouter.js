@@ -3,6 +3,8 @@ const mongoose = require("mongoose");
 const userRouter = express.Router();
 const crypto = require("node:crypto");
 const user = require("../model/user");
+const customer = require("../model/customer");
+const { uuid } = require("uuidv4");
 
 // Lấy thông tin tất cả người dùng
 userRouter.get("", async (req, res) => {
@@ -66,16 +68,25 @@ userRouter.post("/regis", async (req, res) => {
   hash = crypto
     .pbkdf2Sync(req.body.password, salt, 1000, 64, `sha512`)
     .toString(`hex`);
+  let user_id = uuid().slice(0, 11);
   let newUser = new user({
-    email: req.body.email,
-    gender: req.body.gender,
+    user_id: user_id,
+    user_type: "Customer",
+    first_name: req.body.first_name,
+    last_name: req.body.last_name,
+    username: req.body.last_name + req.body.first_name,
     password: hash,
     salt: salt,
+    email: req.body.email,
+    gender: req.body.gender,
     phone_number: req.body.phone,
-    first_name: req.body.firs_tname,
-    last_name: req.body.last_name,
   });
-  user
+  let newCustomer = new customer({
+    user_id: user_id,
+    addresses: req.body.addresses,
+  });
+  await customer.insertMany(newCustomer);
+  await user
     .insertMany(newUser)
     .then((user) => {
       if (user) {
@@ -192,10 +203,10 @@ userRouter.delete("/:id", async (req, res) => {
       return res.sendStatus(200);
     } else {
       let o_id = new mongoose.Types.ObjectId(req.params.id);
-  const response = await user
-    .findByIdAndRemove(o_id)
-    .then((user) => res.json(user))
-    .catch((err) => res.status(500).json({ error: err.message }));
+      const response = await user
+        .findByIdAndRemove(o_id)
+        .then((user) => res.json(user))
+        .catch((err) => res.status(500).json({ error: err.message }));
     }
   });
 });

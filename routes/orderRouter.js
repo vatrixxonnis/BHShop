@@ -43,6 +43,7 @@ orderRouter.post("", async (req, res) => {
 });
 
 orderRouter.post("/detail", async (req, res) => {
+  console.log(req.body);
   order
     .findOne({ _id: req.body.order_id })
     .then((data) => {

@@ -67,4 +67,17 @@ router.post("/wardName", async (req, res) => {
   }
 });
 
+// router.get("/change", (req, res) => {
+//   residences.forEach((province) => {
+//     province.value = province.code;
+//     province.children.forEach((district) => {
+//       district.value = district.code;
+//       district.children.forEach((ward) => {
+//         ward.value = ward.code;
+//       });
+//     })
+//   })
+//   res.send(residences);
+// })
+
 module.exports = router;

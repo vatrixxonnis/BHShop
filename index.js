@@ -35,7 +35,8 @@ const customerRoutes = require("./routes/customerRouter.js");
 const orderRoutes = require("./routes/orderRouter.js");
 const paymentRoutes = require("./routes/paymentRouter.js");
 const reviewRoutes = require("./routes/reviewRouter");
-// const newsLetterRouter = require("./routes/newsLetterRouter.js");
+const newsRoutes = require("./routes/newsRouter.js");
+
 app.use("/", routes);
 app.use("/products", productRoutes);
 app.use("/users", userRoutes);
@@ -45,7 +46,7 @@ app.use("/customers", customerRoutes);
 app.use("/orders", orderRoutes);
 app.use("/payments", paymentRoutes);
 app.use("/reviews", reviewRoutes);
-// app.use("/newsletters", newsLetterRouter);
+app.use("/newsletters", newsRoutes);
 // // Import middleware
 // const accessLogsMiddleware = require("./middleware/accessLog");
 // const salt = crypto.randomBytes(16).toString("hex"); // create salt
