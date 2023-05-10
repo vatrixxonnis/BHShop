@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const newsLetterRouter = express.Router();
 
-const newsLetter = require("../model/newsLetter");
+const newsLetter = require("../model/newsLetter.js");
 
 newsLetterRouter.get("", async (req, res) => {
   newsLetter
