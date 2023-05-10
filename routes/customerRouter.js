@@ -38,8 +38,9 @@ customerRouter.post("/wishlist/add", async (req, res) => {
     .then(async (respone) => {
       let index = await respone.wishlist.findIndex((item) => {
         let o_id = new mongoose.Types.ObjectId(req.body.product._id);
-        return item._id == o_id;
+        return (item._id).toString() == (o_id).toString();
       });
+      console.log(index);
       if (index == -1) {
         req.body.product._id = new mongoose.Types.ObjectId(req.body.product._id);
         respone.wishlist.push(req.body.product);
