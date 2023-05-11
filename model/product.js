@@ -9,6 +9,7 @@ const product = new Schema({
   campaign: { type: Object },
   price: { type: Number },
   inventory_qty: { type: Number },
+  reviews: { type: Array },
   image: { type: Array },
   category_lst: { type: Array },
   country_of_origin: { type: String },

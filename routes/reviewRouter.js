@@ -153,4 +153,24 @@ reviewRouter.delete("/:id", async (req, res) => {
   }
 });
 
+// Thêm một review
+reviewRouter.post("/", async (req, res) => {
+  let newReview = new review({
+    _id: new mongoose.Types.ObjectId(),
+    product_id: req.body.product_id,
+    user_id: req.body.user_id,
+    rating: req.body.rating,
+    comment: req.body.comment,
+    created_at: Date.now(),
+    updated_at: Date.now(),
+  });
+  await review.insertMany(newReview);
+  await product
+    .findByIdAndUpdate(req.body.product_id, {
+      $push: { "reviews": newReview },
+    })
+    .then((product) => res.json(product))
+    .catch((err) => res.status(500).json({ error: err.message }));
+});
+
 module.exports = reviewRouter;
