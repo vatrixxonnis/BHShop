@@ -47,12 +47,42 @@ reviewRouter.get("/", async (req, res) => {
 
 // Lấy một review dựa trên ID
 reviewRouter.get("/:id", async (req, res) => {
+  console.log(req.params.id);
   try {
-    const review = await review.findById(req.params.id);
-    if (!review) {
+    const result = await review.aggregate([
+      {
+        $lookup: {
+          from: "User",
+          localField: "user_id",
+          foreignField: "user_id",
+          as: "user",
+        },
+      },
+      {
+        $project: {
+          "user.first_name": 1,
+          "user.last_name": 1,
+          product_id: 1,
+          user_id: 1,
+          rating: 1,
+          comment: 1,
+          created_at: 1,
+          updated_at: 1,
+          label: 1,
+        },
+      },
+      {
+        $match: {
+          $expr: {
+            $eq: ["$_id", new mongoose.Types.ObjectId(req.params.id)],
+          },
+        },
+      },
+    ]);
+    if (!result) {
       return res.status(404).json({ error: "Review không tồn tại" });
     }
-    return res.json(review);
+    return res.json(result);
   } catch (err) {
     return res.status(500).json({ error: err.message });
   }
