@@ -80,4 +80,8 @@ router.post("/wardName", async (req, res) => {
 //   res.send(residences);
 // })
 
+router.get("/health",(req,res) => {
+  res.sendStatus(200);
+})
+
 module.exports = router;
