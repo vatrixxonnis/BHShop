@@ -35,8 +35,9 @@ const customerRoutes = require("./routes/customerRouter.js");
 const orderRoutes = require("./routes/orderRouter.js");
 const paymentRoutes = require("./routes/paymentRouter.js");
 const reviewRoutes = require("./routes/reviewRouter");
-const couponRouter = require("./routes/couponRouter");
+const couponRoutes = require("./routes/couponRouter");
 const newsRoutes = require("./routes/newsRouter.js");
+const ueldailyRouter = require("./routes/ueldailyRouter.js");
 
 app.use("/", routes);
 app.use("/products", productRoutes);
@@ -48,7 +49,8 @@ app.use("/orders", orderRoutes);
 app.use("/payments", paymentRoutes);
 app.use("/reviews", reviewRoutes);
 app.use("/newsletters", newsRoutes);
-app.use("/coupons", couponRouter);
+app.use("/coupons", couponRoutes);
+app.use("/ueldaily", ueldailyRouter);
 // Import middleware
 // const accessLogsMiddleware = require("./middleware/accessLog");
 // const salt = crypto.randomBytes(16).toString("hex"); // create salt
@@ -62,5 +64,5 @@ app.use("/coupons", couponRouter);
 // Apply middleware
 // app.use(accessLogsMiddleware);
 app.listen(port, () => {
-  console.log(`My server is listening on port ${port}`);
+  console.log(`My server is listening on port ${port}. The address is http://localhost:${port}`);
 });

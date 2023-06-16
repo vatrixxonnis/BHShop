@@ -1,0 +1,1210 @@
+[{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa24"
+  },
+  "address_id": "01",
+  "district": [
+    "Quận Ba Đình",
+    "Quận Hoàn Kiếm",
+    "Quận Tây Hồ",
+    "Quận Long Biên",
+    "Quận Cầu Giấy",
+    "Quận Đống Đa",
+    "Quận Hai Bà Trưng",
+    "Quận Hoàng Mai",
+    "Quận Thanh Xuân",
+    "Huyện Sóc Sơn",
+    "Huyện Đông Anh",
+    "Huyện Gia Lâm",
+    "Quận Nam Từ Liêm",
+    "Huyện Thanh Trì",
+    "Quận Bắc Từ Liêm",
+    "Huyện Mê Linh",
+    "Quận Hà Đông",
+    "Thị xã Sơn Tây",
+    "Huyện Ba Vì",
+    "Huyện Phúc Thọ",
+    "Huyện Đan Phượng",
+    "Huyện Hoài Đức",
+    "Huyện Quốc Oai",
+    "Huyện Thạch Thất",
+    "Huyện Chương Mỹ",
+    "Huyện Thanh Oai",
+    "Huyện Thường Tín",
+    "Huyện Phú Xuyên",
+    "Huyện Ứng Hòa",
+    "Huyện Mỹ Đức"
+  ],
+  "province": "Thành phố Hà Nội"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa25"
+  },
+  "address_id": "02",
+  "district": [
+    "Thành phố Hà Giang",
+    "Huyện Đồng Văn",
+    "Huyện Mèo Vạc",
+    "Huyện Yên Minh",
+    "Huyện Quản Bạ",
+    "Huyện Vị Xuyên",
+    "Huyện Bắc Mê",
+    "Huyện Hoàng Su Phì",
+    "Huyện Xín Mần",
+    "Huyện Bắc Quang",
+    "Huyện Quang Bình"
+  ],
+  "province": "Tỉnh Hà Giang"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa26"
+  },
+  "address_id": "04",
+  "district": [
+    "Thành phố Cao Bằng",
+    "Huyện Bảo Lâm",
+    "Huyện Bảo Lạc",
+    "Huyện Hà Quảng",
+    "Huyện Trùng Khánh",
+    "Huyện Hạ Lang",
+    "Huyện Quảng Hòa",
+    "Huyện Hoà An",
+    "Huyện Nguyên Bình",
+    "Huyện Thạch An"
+  ],
+  "province": "Tỉnh Cao Bằng"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa27"
+  },
+  "address_id": "06",
+  "district": [
+    "Thành Phố Bắc Kạn",
+    "Huyện Pác Nặm",
+    "Huyện Ba Bể",
+    "Huyện Ngân Sơn",
+    "Huyện Bạch Thông",
+    "Huyện Chợ Đồn",
+    "Huyện Chợ Mới",
+    "Huyện Na Rì"
+  ],
+  "province": "Tỉnh Bắc Kạn"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa28"
+  },
+  "address_id": "08",
+  "district": [
+    "Thành phố Tuyên Quang",
+    "Huyện Lâm Bình",
+    "Huyện Na Hang",
+    "Huyện Chiêm Hóa",
+    "Huyện Hàm Yên",
+    "Huyện Yên Sơn",
+    "Huyện Sơn Dương"
+  ],
+  "province": "Tỉnh Tuyên Quang"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa29"
+  },
+  "address_id": "10",
+  "district": [
+    "Thành phố Lào Cai",
+    "Huyện Bát Xát",
+    "Huyện Mường Khương",
+    "Huyện Si Ma Cai",
+    "Huyện Bắc Hà",
+    "Huyện Bảo Thắng",
+    "Huyện Bảo Yên",
+    "Thị xã Sa Pa",
+    "Huyện Văn Bàn"
+  ],
+  "province": "Tỉnh Lào Cai"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa2a"
+  },
+  "address_id": "11",
+  "district": [
+    "Thành phố Điện Biên Phủ",
+    "Thị xã Mường Lay",
+    "Huyện Mường Nhé",
+    "Huyện Mường Chà",
+    "Huyện Tủa Chùa",
+    "Huyện Tuần Giáo",
+    "Huyện Điện Biên",
+    "Huyện Điện Biên Đông",
+    "Huyện Mường Ảng",
+    "Huyện Nậm Pồ"
+  ],
+  "province": "Tỉnh Điện Biên"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa2b"
+  },
+  "address_id": "12",
+  "district": [
+    "Thành phố Lai Châu",
+    "Huyện Tam Đường",
+    "Huyện Mường Tè",
+    "Huyện Sìn Hồ",
+    "Huyện Phong Thổ",
+    "Huyện Than Uyên",
+    "Huyện Tân Uyên",
+    "Huyện Nậm Nhùn"
+  ],
+  "province": "Tỉnh Lai Châu"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa2c"
+  },
+  "address_id": "14",
+  "district": [
+    "Thành phố Sơn La",
+    "Huyện Quỳnh Nhai",
+    "Huyện Thuận Châu",
+    "Huyện Mường La",
+    "Huyện Bắc Yên",
+    "Huyện Phù Yên",
+    "Huyện Mộc Châu",
+    "Huyện Yên Châu",
+    "Huyện Mai Sơn",
+    "Huyện Sông Mã",
+    "Huyện Sốp Cộp",
+    "Huyện Vân Hồ"
+  ],
+  "province": "Tỉnh Sơn La"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa2d"
+  },
+  "address_id": "15",
+  "district": [
+    "Thành phố Yên Bái",
+    "Thị xã Nghĩa Lộ",
+    "Huyện Lục Yên",
+    "Huyện Văn Yên",
+    "Huyện Mù Căng Chải",
+    "Huyện Trấn Yên",
+    "Huyện Trạm Tấu",
+    "Huyện Văn Chấn",
+    "Huyện Yên Bình"
+  ],
+  "province": "Tỉnh Yên Bái"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa2e"
+  },
+  "address_id": "17",
+  "district": [
+    "Thành phố Hòa Bình",
+    "Huyện Đà Bắc",
+    "Huyện Lương Sơn",
+    "Huyện Kim Bôi",
+    "Huyện Cao Phong",
+    "Huyện Tân Lạc",
+    "Huyện Mai Châu",
+    "Huyện Lạc Sơn",
+    "Huyện Yên Thủy",
+    "Huyện Lạc Thủy"
+  ],
+  "province": "Tỉnh Hoà Bình"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa2f"
+  },
+  "address_id": "19",
+  "district": [
+    "Thành phố Thái Nguyên",
+    "Thành phố Sông Công",
+    "Huyện Định Hóa",
+    "Huyện Phú Lương",
+    "Huyện Đồng Hỷ",
+    "Huyện Võ Nhai",
+    "Huyện Đại Từ",
+    "Thành phố Phổ Yên",
+    "Huyện Phú Bình"
+  ],
+  "province": "Tỉnh Thái Nguyên"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa30"
+  },
+  "address_id": "20",
+  "district": [
+    "Thành phố Lạng Sơn",
+    "Huyện Tràng Định",
+    "Huyện Bình Gia",
+    "Huyện Văn Lãng",
+    "Huyện Cao Lộc",
+    "Huyện Văn Quan",
+    "Huyện Bắc Sơn",
+    "Huyện Hữu Lũng",
+    "Huyện Chi Lăng",
+    "Huyện Lộc Bình",
+    "Huyện Đình Lập"
+  ],
+  "province": "Tỉnh Lạng Sơn"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa31"
+  },
+  "address_id": "22",
+  "district": [
+    "Thành phố Hạ Long",
+    "Thành phố Móng Cái",
+    "Thành phố Cẩm Phả",
+    "Thành phố Uông Bí",
+    "Huyện Bình Liêu",
+    "Huyện Tiên Yên",
+    "Huyện Đầm Hà",
+    "Huyện Hải Hà",
+    "Huyện Ba Chẽ",
+    "Huyện Vân Đồn",
+    "Thị xã Đông Triều",
+    "Thị xã Quảng Yên",
+    "Huyện Cô Tô"
+  ],
+  "province": "Tỉnh Quảng Ninh"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa32"
+  },
+  "address_id": "24",
+  "district": [
+    "Thành phố Bắc Giang",
+    "Huyện Yên Thế",
+    "Huyện Tân Yên",
+    "Huyện Lạng Giang",
+    "Huyện Lục Nam",
+    "Huyện Lục Ngạn",
+    "Huyện Sơn Động",
+    "Huyện Yên Dũng",
+    "Huyện Việt Yên",
+    "Huyện Hiệp Hòa"
+  ],
+  "province": "Tỉnh Bắc Giang"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa33"
+  },
+  "address_id": "25",
+  "district": [
+    "Thành phố Việt Trì",
+    "Thị xã Phú Thọ",
+    "Huyện Đoan Hùng",
+    "Huyện Hạ Hoà",
+    "Huyện Thanh Ba",
+    "Huyện Phù Ninh",
+    "Huyện Yên Lập",
+    "Huyện Cẩm Khê",
+    "Huyện Tam Nông",
+    "Huyện Lâm Thao",
+    "Huyện Thanh Sơn",
+    "Huyện Thanh Thuỷ",
+    "Huyện Tân Sơn"
+  ],
+  "province": "Tỉnh Phú Thọ"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa34"
+  },
+  "address_id": "26",
+  "district": [
+    "Thành phố Vĩnh Yên",
+    "Thành phố Phúc Yên",
+    "Huyện Lập Thạch",
+    "Huyện Tam Dương",
+    "Huyện Tam Đảo",
+    "Huyện Bình Xuyên",
+    "Huyện Yên Lạc",
+    "Huyện Vĩnh Tường",
+    "Huyện Sông Lô"
+  ],
+  "province": "Tỉnh Vĩnh Phúc"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa35"
+  },
+  "address_id": "27",
+  "district": [
+    "Thành phố Bắc Ninh",
+    "Huyện Yên Phong",
+    "Huyện Quế Võ",
+    "Huyện Tiên Du",
+    "Thành phố Từ Sơn",
+    "Huyện Thuận Thành",
+    "Huyện Gia Bình",
+    "Huyện Lương Tài"
+  ],
+  "province": "Tỉnh Bắc Ninh"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa36"
+  },
+  "address_id": "30",
+  "district": [
+    "Thành phố Hải Dương",
+    "Thành phố Chí Linh",
+    "Huyện Nam Sách",
+    "Thị xã Kinh Môn",
+    "Huyện Kim Thành",
+    "Huyện Thanh Hà",
+    "Huyện Cẩm Giàng",
+    "Huyện Bình Giang",
+    "Huyện Gia Lộc",
+    "Huyện Tứ Kỳ",
+    "Huyện Ninh Giang",
+    "Huyện Thanh Miện"
+  ],
+  "province": "Tỉnh Hải Dương"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa37"
+  },
+  "address_id": "31",
+  "district": [
+    "Quận Hồng Bàng",
+    "Quận Ngô Quyền",
+    "Quận Lê Chân",
+    "Quận Hải An",
+    "Quận Kiến An",
+    "Quận Đồ Sơn",
+    "Quận Dương Kinh",
+    "Huyện Thuỷ Nguyên",
+    "Huyện An Dương",
+    "Huyện An Lão",
+    "Huyện Kiến Thuỵ",
+    "Huyện Tiên Lãng",
+    "Huyện Vĩnh Bảo",
+    "Huyện Cát Hải",
+    "Huyện Bạch Long Vĩ"
+  ],
+  "province": "Thành phố Hải Phòng"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa38"
+  },
+  "address_id": "33",
+  "district": [
+    "Thành phố Hưng Yên",
+    "Huyện Văn Lâm",
+    "Huyện Văn Giang",
+    "Huyện Yên Mỹ",
+    "Thị xã Mỹ Hào",
+    "Huyện Ân Thi",
+    "Huyện Khoái Châu",
+    "Huyện Kim Động",
+    "Huyện Tiên Lữ",
+    "Huyện Phù Cừ"
+  ],
+  "province": "Tỉnh Hưng Yên"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa39"
+  },
+  "address_id": "34",
+  "district": [
+    "Thành phố Thái Bình",
+    "Huyện Quỳnh Phụ",
+    "Huyện Hưng Hà",
+    "Huyện Đông Hưng",
+    "Huyện Thái Thụy",
+    "Huyện Tiền Hải",
+    "Huyện Kiến Xương",
+    "Huyện Vũ Thư"
+  ],
+  "province": "Tỉnh Thái Bình"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa3a"
+  },
+  "address_id": "35",
+  "district": [
+    "Thành phố Phủ Lý",
+    "Thị xã Duy Tiên",
+    "Huyện Kim Bảng",
+    "Huyện Thanh Liêm",
+    "Huyện Bình Lục",
+    "Huyện Lý Nhân"
+  ],
+  "province": "Tỉnh Hà Nam"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa3b"
+  },
+  "address_id": "36",
+  "district": [
+    "Thành phố Nam Định",
+    "Huyện Mỹ Lộc",
+    "Huyện Vụ Bản",
+    "Huyện Ý Yên",
+    "Huyện Nghĩa Hưng",
+    "Huyện Nam Trực",
+    "Huyện Trực Ninh",
+    "Huyện Xuân Trường",
+    "Huyện Giao Thủy",
+    "Huyện Hải Hậu"
+  ],
+  "province": "Tỉnh Nam Định"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa3c"
+  },
+  "address_id": "37",
+  "district": [
+    "Thành phố Ninh Bình",
+    "Thành phố Tam Điệp",
+    "Huyện Nho Quan",
+    "Huyện Gia Viễn",
+    "Huyện Hoa Lư",
+    "Huyện Yên Khánh",
+    "Huyện Kim Sơn",
+    "Huyện Yên Mô"
+  ],
+  "province": "Tỉnh Ninh Bình"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa3d"
+  },
+  "address_id": "38",
+  "district": [
+    "Thành phố Thanh Hóa",
+    "Thị xã Bỉm Sơn",
+    "Thành phố Sầm Sơn",
+    "Huyện Mường Lát",
+    "Huyện Quan Hóa",
+    "Huyện Bá Thước",
+    "Huyện Quan Sơn",
+    "Huyện Lang Chánh",
+    "Huyện Ngọc Lặc",
+    "Huyện Cẩm Thủy",
+    "Huyện Thạch Thành",
+    "Huyện Hà Trung",
+    "Huyện Vĩnh Lộc",
+    "Huyện Yên Định",
+    "Huyện Thọ Xuân",
+    "Huyện Thường Xuân",
+    "Huyện Triệu Sơn",
+    "Huyện Thiệu Hóa",
+    "Huyện Hoằng Hóa",
+    "Huyện Hậu Lộc",
+    "Huyện Nga Sơn",
+    "Huyện Như Xuân",
+    "Huyện Như Thanh",
+    "Huyện Nông Cống",
+    "Huyện Đông Sơn",
+    "Huyện Quảng Xương",
+    "Thị xã Nghi Sơn"
+  ],
+  "province": "Tỉnh Thanh Hóa"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa3e"
+  },
+  "address_id": "40",
+  "district": [
+    "Thành phố Vinh",
+    "Thị xã Cửa Lò",
+    "Thị xã Thái Hoà",
+    "Huyện Quế Phong",
+    "Huyện Quỳ Châu",
+    "Huyện Kỳ Sơn",
+    "Huyện Tương Dương",
+    "Huyện Nghĩa Đàn",
+    "Huyện Quỳ Hợp",
+    "Huyện Quỳnh Lưu",
+    "Huyện Con Cuông",
+    "Huyện Tân Kỳ",
+    "Huyện Anh Sơn",
+    "Huyện Diễn Châu",
+    "Huyện Yên Thành",
+    "Huyện Đô Lương",
+    "Huyện Thanh Chương",
+    "Huyện Nghi Lộc",
+    "Huyện Nam Đàn",
+    "Huyện Hưng Nguyên",
+    "Thị xã Hoàng Mai"
+  ],
+  "province": "Tỉnh Nghệ An"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa3f"
+  },
+  "address_id": "42",
+  "district": [
+    "Thành phố Hà Tĩnh",
+    "Thị xã Hồng Lĩnh",
+    "Huyện Hương Sơn",
+    "Huyện Đức Thọ",
+    "Huyện Vũ Quang",
+    "Huyện Nghi Xuân",
+    "Huyện Can Lộc",
+    "Huyện Hương Khê",
+    "Huyện Thạch Hà",
+    "Huyện Cẩm Xuyên",
+    "Huyện Kỳ Anh",
+    "Huyện Lộc Hà",
+    "Thị xã Kỳ Anh"
+  ],
+  "province": "Tỉnh Hà Tĩnh"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa40"
+  },
+  "address_id": "44",
+  "district": [
+    "Thành Phố Đồng Hới",
+    "Huyện Minh Hóa",
+    "Huyện Tuyên Hóa",
+    "Huyện Quảng Trạch",
+    "Huyện Bố Trạch",
+    "Huyện Quảng Ninh",
+    "Huyện Lệ Thủy",
+    "Thị xã Ba Đồn"
+  ],
+  "province": "Tỉnh Quảng Bình"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa41"
+  },
+  "address_id": "45",
+  "district": [
+    "Thành phố Đông Hà",
+    "Thị xã Quảng Trị",
+    "Huyện Vĩnh Linh",
+    "Huyện Hướng Hóa",
+    "Huyện Gio Linh",
+    "Huyện Đa Krông",
+    "Huyện Cam Lộ",
+    "Huyện Triệu Phong",
+    "Huyện Hải Lăng",
+    "Huyện Cồn Cỏ"
+  ],
+  "province": "Tỉnh Quảng Trị"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa42"
+  },
+  "address_id": "46",
+  "district": [
+    "Thành phố Huế",
+    "Huyện Phong Điền",
+    "Huyện Quảng Điền",
+    "Huyện Phú Vang",
+    "Thị xã Hương Thủy",
+    "Thị xã Hương Trà",
+    "Huyện A Lưới",
+    "Huyện Phú Lộc",
+    "Huyện Nam Đông"
+  ],
+  "province": "Tỉnh Thừa Thiên Huế"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa43"
+  },
+  "address_id": "48",
+  "district": [
+    "Quận Liên Chiểu",
+    "Quận Thanh Khê",
+    "Quận Hải Châu",
+    "Quận Sơn Trà",
+    "Quận Ngũ Hành Sơn",
+    "Quận Cẩm Lệ",
+    "Huyện Hòa Vang",
+    "Huyện Hoàng Sa"
+  ],
+  "province": "Thành phố Đà Nẵng"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa44"
+  },
+  "address_id": "49",
+  "district": [
+    "Thành phố Tam Kỳ",
+    "Thành phố Hội An",
+    "Huyện Tây Giang",
+    "Huyện Đông Giang",
+    "Huyện Đại Lộc",
+    "Thị xã Điện Bàn",
+    "Huyện Duy Xuyên",
+    "Huyện Quế Sơn",
+    "Huyện Nam Giang",
+    "Huyện Phước Sơn",
+    "Huyện Hiệp Đức",
+    "Huyện Thăng Bình",
+    "Huyện Tiên Phước",
+    "Huyện Bắc Trà My",
+    "Huyện Nam Trà My",
+    "Huyện Núi Thành",
+    "Huyện Phú Ninh",
+    "Huyện Nông Sơn"
+  ],
+  "province": "Tỉnh Quảng Nam"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa45"
+  },
+  "address_id": "51",
+  "district": [
+    "Thành phố Quảng Ngãi",
+    "Huyện Bình Sơn",
+    "Huyện Trà Bồng",
+    "Huyện Sơn Tịnh",
+    "Huyện Tư Nghĩa",
+    "Huyện Sơn Hà",
+    "Huyện Sơn Tây",
+    "Huyện Minh Long",
+    "Huyện Nghĩa Hành",
+    "Huyện Mộ Đức",
+    "Thị xã Đức Phổ",
+    "Huyện Ba Tơ",
+    "Huyện Lý Sơn"
+  ],
+  "province": "Tỉnh Quảng Ngãi"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa46"
+  },
+  "address_id": "52",
+  "district": [
+    "Thành phố Quy Nhơn",
+    "Huyện An Lão",
+    "Thị xã Hoài Nhơn",
+    "Huyện Hoài Ân",
+    "Huyện Phù Mỹ",
+    "Huyện Vĩnh Thạnh",
+    "Huyện Tây Sơn",
+    "Huyện Phù Cát",
+    "Thị xã An Nhơn",
+    "Huyện Tuy Phước",
+    "Huyện Vân Canh"
+  ],
+  "province": "Tỉnh Bình Định"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa47"
+  },
+  "address_id": "54",
+  "district": [
+    "Thành phố Tuy Hoà",
+    "Thị xã Sông Cầu",
+    "Huyện Đồng Xuân",
+    "Huyện Tuy An",
+    "Huyện Sơn Hòa",
+    "Huyện Sông Hinh",
+    "Huyện Tây Hoà",
+    "Huyện Phú Hoà",
+    "Thị xã Đông Hòa"
+  ],
+  "province": "Tỉnh Phú Yên"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa48"
+  },
+  "address_id": "56",
+  "district": [
+    "Thành phố Nha Trang",
+    "Thành phố Cam Ranh",
+    "Huyện Cam Lâm",
+    "Huyện Vạn Ninh",
+    "Thị xã Ninh Hòa",
+    "Huyện Khánh Vĩnh",
+    "Huyện Diên Khánh",
+    "Huyện Khánh Sơn",
+    "Huyện Trường Sa"
+  ],
+  "province": "Tỉnh Khánh Hòa"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa49"
+  },
+  "address_id": "58",
+  "district": [
+    "Thành phố Phan Rang-Tháp Chàm",
+    "Huyện Bác Ái",
+    "Huyện Ninh Sơn",
+    "Huyện Ninh Hải",
+    "Huyện Ninh Phước",
+    "Huyện Thuận Bắc",
+    "Huyện Thuận Nam"
+  ],
+  "province": "Tỉnh Ninh Thuận"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa4a"
+  },
+  "address_id": "60",
+  "district": [
+    "Thành phố Phan Thiết",
+    "Thị xã La Gi",
+    "Huyện Tuy Phong",
+    "Huyện Bắc Bình",
+    "Huyện Hàm Thuận Bắc",
+    "Huyện Hàm Thuận Nam",
+    "Huyện Tánh Linh",
+    "Huyện Đức Linh",
+    "Huyện Hàm Tân",
+    "Huyện Phú Quí"
+  ],
+  "province": "Tỉnh Bình Thuận"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa4b"
+  },
+  "address_id": "62",
+  "district": [
+    "Thành phố Kon Tum",
+    "Huyện Đắk Glei",
+    "Huyện Ngọc Hồi",
+    "Huyện Đắk Tô",
+    "Huyện Kon Plông",
+    "Huyện Kon Rẫy",
+    "Huyện Đắk Hà",
+    "Huyện Sa Thầy",
+    "Huyện Tu Mơ Rông",
+    "Huyện Ia H' Drai"
+  ],
+  "province": "Tỉnh Kon Tum"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa4c"
+  },
+  "address_id": "64",
+  "district": [
+    "Thành phố Pleiku",
+    "Thị xã An Khê",
+    "Thị xã Ayun Pa",
+    "Huyện KBang",
+    "Huyện Đăk Đoa",
+    "Huyện Chư Păh",
+    "Huyện Ia Grai",
+    "Huyện Mang Yang",
+    "Huyện Kông Chro",
+    "Huyện Đức Cơ",
+    "Huyện Chư Prông",
+    "Huyện Chư Sê",
+    "Huyện Đăk Pơ",
+    "Huyện Ia Pa",
+    "Huyện Krông Pa",
+    "Huyện Phú Thiện",
+    "Huyện Chư Pưh"
+  ],
+  "province": "Tỉnh Gia Lai"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa4d"
+  },
+  "address_id": "66",
+  "district": [
+    "Thành phố Buôn Ma Thuột",
+    "Thị xã Buôn Hồ",
+    "Huyện Ea H'leo",
+    "Huyện Ea Súp",
+    "Huyện Buôn Đôn",
+    "Huyện Cư M'gar",
+    "Huyện Krông Búk",
+    "Huyện Krông Năng",
+    "Huyện Ea Kar",
+    "Huyện M'Đrắk",
+    "Huyện Krông Bông",
+    "Huyện Krông Pắc",
+    "Huyện Krông A Na",
+    "Huyện Lắk",
+    "Huyện Cư Kuin"
+  ],
+  "province": "Tỉnh Đắk Lắk"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa4e"
+  },
+  "address_id": "67",
+  "district": [
+    "Thành phố Gia Nghĩa",
+    "Huyện Đăk Glong",
+    "Huyện Cư Jút",
+    "Huyện Đắk Mil",
+    "Huyện Krông Nô",
+    "Huyện Đắk Song",
+    "Huyện Đắk R'Lấp",
+    "Huyện Tuy Đức"
+  ],
+  "province": "Tỉnh Đắk Nông"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa4f"
+  },
+  "address_id": "68",
+  "district": [
+    "Thành phố Đà Lạt",
+    "Thành phố Bảo Lộc",
+    "Huyện Đam Rông",
+    "Huyện Lạc Dương",
+    "Huyện Lâm Hà",
+    "Huyện Đơn Dương",
+    "Huyện Đức Trọng",
+    "Huyện Di Linh",
+    "Huyện Bảo Lâm",
+    "Huyện Đạ Huoai",
+    "Huyện Đạ Tẻh",
+    "Huyện Cát Tiên"
+  ],
+  "province": "Tỉnh Lâm Đồng"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa50"
+  },
+  "address_id": "70",
+  "district": [
+    "Thị xã Phước Long",
+    "Thành phố Đồng Xoài",
+    "Thị xã Bình Long",
+    "Huyện Bù Gia Mập",
+    "Huyện Lộc Ninh",
+    "Huyện Bù Đốp",
+    "Huyện Hớn Quản",
+    "Huyện Đồng Phú",
+    "Huyện Bù Đăng",
+    "Thị xã Chơn Thành",
+    "Huyện Phú Riềng"
+  ],
+  "province": "Tỉnh Bình Phước"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa51"
+  },
+  "address_id": "72",
+  "district": [
+    "Thành phố Tây Ninh",
+    "Huyện Tân Biên",
+    "Huyện Tân Châu",
+    "Huyện Dương Minh Châu",
+    "Huyện Châu Thành",
+    "Thị xã Hòa Thành",
+    "Huyện Gò Dầu",
+    "Huyện Bến Cầu",
+    "Thị xã Trảng Bàng"
+  ],
+  "province": "Tỉnh Tây Ninh"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa52"
+  },
+  "address_id": "74",
+  "district": [
+    "Thành phố Thủ Dầu Một",
+    "Huyện Bàu Bàng",
+    "Huyện Dầu Tiếng",
+    "Thị xã Bến Cát",
+    "Huyện Phú Giáo",
+    "Thị xã Tân Uyên",
+    "Thành phố Dĩ An",
+    "Thành phố Thuận An",
+    "Huyện Bắc Tân Uyên"
+  ],
+  "province": "Tỉnh Bình Dương"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa53"
+  },
+  "address_id": "75",
+  "district": [
+    "Thành phố Biên Hòa",
+    "Thành phố Long Khánh",
+    "Huyện Tân Phú",
+    "Huyện Vĩnh Cửu",
+    "Huyện Định Quán",
+    "Huyện Trảng Bom",
+    "Huyện Thống Nhất",
+    "Huyện Cẩm Mỹ",
+    "Huyện Long Thành",
+    "Huyện Xuân Lộc",
+    "Huyện Nhơn Trạch"
+  ],
+  "province": "Tỉnh Đồng Nai"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa54"
+  },
+  "address_id": "77",
+  "district": [
+    "Thành phố Vũng Tàu",
+    "Thành phố Bà Rịa",
+    "Huyện Châu Đức",
+    "Huyện Xuyên Mộc",
+    "Huyện Long Điền",
+    "Huyện Đất Đỏ",
+    "Thị xã Phú Mỹ",
+    "Huyện Côn Đảo"
+  ],
+  "province": "Tỉnh Bà Rịa - Vũng Tàu"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa55"
+  },
+  "address_id": "79",
+  "district": [
+    "Quận 1",
+    "Quận 12",
+    "Quận Gò Vấp",
+    "Quận Bình Thạnh",
+    "Quận Tân Bình",
+    "Quận Tân Phú",
+    "Quận Phú Nhuận",
+    "Thành phố Thủ Đức",
+    "Quận 3",
+    "Quận 10",
+    "Quận 11",
+    "Quận 4",
+    "Quận 5",
+    "Quận 6",
+    "Quận 8",
+    "Quận Bình Tân",
+    "Quận 7",
+    "Huyện Củ Chi",
+    "Huyện Hóc Môn",
+    "Huyện Bình Chánh",
+    "Huyện Nhà Bè",
+    "Huyện Cần Giờ"
+  ],
+  "province": "Thành phố Hồ Chí Minh"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa56"
+  },
+  "address_id": "80",
+  "district": [
+    "Thành phố Tân An",
+    "Thị xã Kiến Tường",
+    "Huyện Tân Hưng",
+    "Huyện Vĩnh Hưng",
+    "Huyện Mộc Hóa",
+    "Huyện Tân Thạnh",
+    "Huyện Thạnh Hóa",
+    "Huyện Đức Huệ",
+    "Huyện Đức Hòa",
+    "Huyện Bến Lức",
+    "Huyện Thủ Thừa",
+    "Huyện Tân Trụ",
+    "Huyện Cần Đước",
+    "Huyện Cần Giuộc",
+    "Huyện Châu Thành"
+  ],
+  "province": "Tỉnh Long An"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa57"
+  },
+  "address_id": "82",
+  "district": [
+    "Thành phố Mỹ Tho",
+    "Thị xã Gò Công",
+    "Thị xã Cai Lậy",
+    "Huyện Tân Phước",
+    "Huyện Cái Bè",
+    "Huyện Cai Lậy",
+    "Huyện Châu Thành",
+    "Huyện Chợ Gạo",
+    "Huyện Gò Công Tây",
+    "Huyện Gò Công Đông",
+    "Huyện Tân Phú Đông"
+  ],
+  "province": "Tỉnh Tiền Giang"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa58"
+  },
+  "address_id": "83",
+  "district": [
+    "Thành phố Bến Tre",
+    "Huyện Châu Thành",
+    "Huyện Chợ Lách",
+    "Huyện Mỏ Cày Nam",
+    "Huyện Giồng Trôm",
+    "Huyện Bình Đại",
+    "Huyện Ba Tri",
+    "Huyện Thạnh Phú",
+    "Huyện Mỏ Cày Bắc"
+  ],
+  "province": "Tỉnh Bến Tre"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa59"
+  },
+  "address_id": "84",
+  "district": [
+    "Thành phố Trà Vinh",
+    "Huyện Càng Long",
+    "Huyện Cầu Kè",
+    "Huyện Tiểu Cần",
+    "Huyện Châu Thành",
+    "Huyện Cầu Ngang",
+    "Huyện Trà Cú",
+    "Huyện Duyên Hải",
+    "Thị xã Duyên Hải"
+  ],
+  "province": "Tỉnh Trà Vinh"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa5a"
+  },
+  "address_id": "86",
+  "district": [
+    "Thành phố Vĩnh Long",
+    "Huyện Long Hồ",
+    "Huyện Mang Thít",
+    "Huyện  Vũng Liêm",
+    "Huyện Tam Bình",
+    "Thị xã Bình Minh",
+    "Huyện Trà Ôn",
+    "Huyện Bình Tân"
+  ],
+  "province": "Tỉnh Vĩnh Long"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa5b"
+  },
+  "address_id": "87",
+  "district": [
+    "Thành phố Cao Lãnh",
+    "Thành phố Sa Đéc",
+    "Thành phố Hồng Ngự",
+    "Huyện Tân Hồng",
+    "Huyện Hồng Ngự",
+    "Huyện Tam Nông",
+    "Huyện Tháp Mười",
+    "Huyện Cao Lãnh",
+    "Huyện Thanh Bình",
+    "Huyện Lấp Vò",
+    "Huyện Lai Vung",
+    "Huyện Châu Thành"
+  ],
+  "province": "Tỉnh Đồng Tháp"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa5c"
+  },
+  "address_id": "89",
+  "district": [
+    "Thành phố Long Xuyên",
+    "Thành phố Châu Đốc",
+    "Huyện An Phú",
+    "Thị xã Tân Châu",
+    "Huyện Phú Tân",
+    "Huyện Châu Phú",
+    "Huyện Tịnh Biên",
+    "Huyện Tri Tôn",
+    "Huyện Châu Thành",
+    "Huyện Chợ Mới",
+    "Huyện Thoại Sơn"
+  ],
+  "province": "Tỉnh An Giang"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa5d"
+  },
+  "address_id": "91",
+  "district": [
+    "Thành phố Rạch Giá",
+    "Thành phố Hà Tiên",
+    "Huyện Kiên Lương",
+    "Huyện Hòn Đất",
+    "Huyện Tân Hiệp",
+    "Huyện Châu Thành",
+    "Huyện Giồng Riềng",
+    "Huyện Gò Quao",
+    "Huyện An Biên",
+    "Huyện An Minh",
+    "Huyện Vĩnh Thuận",
+    "Thành phố Phú Quốc",
+    "Huyện Kiên Hải",
+    "Huyện U Minh Thượng",
+    "Huyện Giang Thành"
+  ],
+  "province": "Tỉnh Kiên Giang"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa5e"
+  },
+  "address_id": "92",
+  "district": [
+    "Quận Ninh Kiều",
+    "Quận Ô Môn",
+    "Quận Bình Thuỷ",
+    "Quận Cái Răng",
+    "Quận Thốt Nốt",
+    "Huyện Vĩnh Thạnh",
+    "Huyện Cờ Đỏ",
+    "Huyện Phong Điền",
+    "Huyện Thới Lai"
+  ],
+  "province": "Thành phố Cần Thơ"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa5f"
+  },
+  "address_id": "93",
+  "district": [
+    "Thành phố Vị Thanh",
+    "Thành phố Ngã Bảy",
+    "Huyện Châu Thành A",
+    "Huyện Châu Thành",
+    "Huyện Phụng Hiệp",
+    "Huyện Vị Thuỷ",
+    "Huyện Long Mỹ",
+    "Thị xã Long Mỹ"
+  ],
+  "province": "Tỉnh Hậu Giang"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa60"
+  },
+  "address_id": "94",
+  "district": [
+    "Thành phố Sóc Trăng",
+    "Huyện Châu Thành",
+    "Huyện Kế Sách",
+    "Huyện Mỹ Tú",
+    "Huyện Cù Lao Dung",
+    "Huyện Long Phú",
+    "Huyện Mỹ Xuyên",
+    "Thị xã Ngã Năm",
+    "Huyện Thạnh Trị",
+    "Thị xã Vĩnh Châu",
+    "Huyện Trần Đề"
+  ],
+  "province": "Tỉnh Sóc Trăng"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa61"
+  },
+  "address_id": "95",
+  "district": [
+    "Thành phố Bạc Liêu",
+    "Huyện Hồng Dân",
+    "Huyện Phước Long",
+    "Huyện Vĩnh Lợi",
+    "Thị xã Giá Rai",
+    "Huyện Đông Hải",
+    "Huyện Hoà Bình"
+  ],
+  "province": "Tỉnh Bạc Liêu"
+},{
+  "_id": {
+    "$oid": "6411416c37a2db2927a2aa62"
+  },
+  "address_id": "96",
+  "district": [
+    "Thành phố Cà Mau",
+    "Huyện U Minh",
+    "Huyện Thới Bình",
+    "Huyện Trần Văn Thời",
+    "Huyện Cái Nước",
+    "Huyện Đầm Dơi",
+    "Huyện Năm Căn",
+    "Huyện Phú Tân",
+    "Huyện Ngọc Hiển"
+  ],
+  "province": "Tỉnh Cà Mau"
+}]
