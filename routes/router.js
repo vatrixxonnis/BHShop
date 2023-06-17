@@ -84,12 +84,4 @@ router.get("/health",(req,res) => {
   res.sendStatus(200);
 });
 
-let serverRedirect =''
-router.get("/serverRedirect",(req,res) => {
-  if(req.query.url){ 
-    serverRedirect = req.query.url;
-  }
-  res.send(serverRedirect);
-})
-
 module.exports = router;
