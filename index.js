@@ -28,8 +28,8 @@ app.use(
   })
 );
 
-const db = require("./config/db");
-db.connect();
+// const db = require("./config/db");
+// db.connect();
 
 const routes = require("./routes/router.js");
 const productRoutes = require("./routes/productRouter.js");
@@ -42,7 +42,7 @@ const paymentRoutes = require("./routes/paymentRouter.js");
 const reviewRoutes = require("./routes/reviewRouter");
 const couponRoutes = require("./routes/couponRouter");
 const newsRoutes = require("./routes/newsRouter.js");
-const ueldailyRouter = require("./routes/ueldailyRouter.js");
+// const ueldailyRouter = require("./routes/ueldailyRouter.js");
 const glowyRouter = require("./routes/glowyRouter.js");
 
 app.use("/", routes);
@@ -56,7 +56,7 @@ app.use("/payments", paymentRoutes);
 app.use("/reviews", reviewRoutes);
 app.use("/newsletters", newsRoutes);
 app.use("/coupons", couponRoutes);
-app.use("/ueldaily", ueldailyRouter);
+// app.use("/ueldaily", ueldailyRouter);
 app.use("/glowy", glowyRouter);
 // Import middleware
 // const accessLogsMiddleware = require("./middleware/accessLog");
@@ -75,3 +75,14 @@ app.listen(port, () => {
     `My server is listening on port ${port}. The address is http://localhost:${port}`
   );
 });
+
+// Prevent Render from sleeping
+const selfPing = require('./middleware/self-ping.js');
+const cron = require('node-cron');
+const preventSleep = cron.schedule('5,19,33,47,1 * * * *', () => {
+  selfPing.handler();
+},{
+  scheduled: false,
+});
+
+preventSleep.start();
