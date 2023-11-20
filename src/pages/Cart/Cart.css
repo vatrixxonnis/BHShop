@@ -1,4 +1,3 @@
-
 .cart-content{
     display: flex;
 }
@@ -23,9 +22,6 @@
     border-radius: 10px;
     margin: 20px;
     
-}
-.total-invoice{
-
 }
 .cart-product__delete{
     color: black;

@@ -18,18 +18,6 @@ function ProductForWeek() {
     const [state, setState] = useState([]);
     const [hasError, setHasError] = useState(false);
     const [loading, setLoading] = useState(false);
-    const displayDiscount = (product) => {
-        if (product?.campaign?.active) {
-            return (
-                <span className="product-item__discount">
-                    {`- ${product.campaign.amount} ${changeType(
-                        product.campaign.sale_type,
-                    )}`}
-                </span>
-            );
-        }
-        return <></>;
-    };
     const changeType = (type) => {
         if (type === 'percent') {
             return '%';

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
 import { ConfigProvider } from 'antd';
 import '@/App.css';
 import { publicRoutes, privateRoutes } from '@/routes';
