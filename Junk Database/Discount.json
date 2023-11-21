@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "6429ba4074203d4d5f6466dd"
+  },
+  "product_id": "pro001",
+  "discount_type": "percentage off",
+  "discount_value": 0.15,
+  "discount_quantity": 1500,
+  "sale_start_date": "2023-04-05",
+  "sale_end_date": "2023-04-10",
+  "status": "active",
+  "sale_name": "Spring Sale",
+  "description": "Get 15% off all items in our Spring Sale!",
+  "promo_code": "SPRING15",
+  "min_purchase_amount": 50,
+  "discounted_price": 85000
+},{
+  "_id": {
+    "$oid": "6429bd7b74203d4d5f6466ef"
+  },
+  "product_id": "pro002",
+  "discount_type": "vnd off",
+  "discount_value": 21000,
+  "discount_quantity": 500,
+  "sale_start_date": "2023-05-01",
+  "sale_end_date": "2023-05-15",
+  "status": "active",
+  "sale_name": "May Savings",
+  "description": "Get a discount of VND 50,000 on eligible products during May Savings promotion!",
+  "promo_code": "MAYSAVINGS50",
+  "min_purchase_amount": 200000,
+  "discounted_price": 149000
+}]

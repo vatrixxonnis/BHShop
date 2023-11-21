@@ -1,0 +1,172 @@
+.footer-letter {
+    width: 100%;
+    background-color: var(--color-primary);
+    color: #ffffff;
+    overflow: hidden;
+
+}
+
+.footer-letter__desc {
+    flex-direction: column;
+
+}
+
+.footer-letter__desc h3,
+p {
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+}
+
+.footer-letter__desc h1 {
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.footer-letter__desc p {
+    line-height: 2rem;
+}
+
+.footer-letter__form {
+    padding: 40px 0;
+    max-width: 470px;
+}
+
+.footer-letter__container {
+    margin-top: 20px;
+    align-items: stretch;
+}
+
+.footer-letter__img {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.email-form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.email-form-button {
+    margin-left: 10px;
+}
+
+/* footer service */
+.footer-services {
+    width: 100%;
+}
+
+.footer-services__list {
+    line-height: 2rem;
+    flex-wrap: wrap;
+    padding: 3rem;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--color-border)
+}
+
+.footer-service__item {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.footer-service__icon {
+    font-size: 2.5rem
+}
+
+.footer-item__text {
+    margin-left: 1rem;
+}
+
+.footer-contact {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.footer-contact__phone {
+    font-size: 2.8rem;
+    font-weight: 500;
+}
+
+.footer-phone__value {
+    margin-left: 1rem;
+}
+
+.footer-copyright__row {
+    width: 100%;
+    padding-bottom: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 0;
+
+}
+
+.footer-copyright__verified {
+    height: 5rem;
+}
+
+
+/* Các đoạn code CSS cho máy tính màn hình nhỏ ở đây */
+/* Độ rộng màn hình lớn hơn hoặc bằng 992px nhỏ hơn 1200 */
+@media screen and (max-width: 1200px) {}
+
+/* Các đoạn code CSS cho máy tính bảng ở đây */
+/* Độ rộng màn hình lớn hơn hoặc bằng 768px và nhỏ hơn 992px */
+@media screen and (max-width: 992px) {
+
+    .footer-letter {
+        position: relative;
+    }
+
+    .footer-letter .footer-letter__form {
+        padding: 20px;
+        z-index: 2;
+        width: 100%;
+    }
+
+    .footer-letter__img {
+        position: absolute;
+        opacity: 0.2;
+        bottom: 0;
+        right: 0;
+
+    }
+
+
+    .footer-letter .ant-form-item {
+        margin-bottom: 15px
+    }
+
+    /* Service */
+    .footer-contact {
+        justify-content: center;
+    }
+
+    .footer-service__item {
+        margin-bottom: 10px;
+    }
+
+    .footer-payment__list {
+        margin-top: 20px;
+    }
+
+    /* copyright */
+    .footer-copyright__row {
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+/* Các đoạn code CSS cho điện thoại ở đây */
+/* Độ rộng màn hình nhỏ hơn hoặc bằng 767px */
+@media screen and (max-width: 768px) {
+    .email-form-button {
+        margin-left: 0;
+    }
+
+}

@@ -1,0 +1,73 @@
+[{
+  "_id": {
+    "$oid": "64341a073584de4234068832"
+  },
+  "shipping_id": "ship001",
+  "shipping_carrier": "Giao hàng tiết kiệm",
+  "is_actived": true,
+  "notes": "Đóng gói cẩn thận, không quá tải"
+},{
+  "_id": {
+    "$oid": "64341a073584de4234068833"
+  },
+  "shipping_id": "ship002",
+  "shipping_carrier": "Bưu điện",
+  "is_actived": true,
+  "notes": "Giao hàng trong giờ hành chính"
+},{
+  "_id": {
+    "$oid": "64341a073584de4234068834"
+  },
+  "shipping_id": "ship003",
+  "shipping_carrier": "Lalamove",
+  "is_actived": true,
+  "notes": "Chỉ giao hàng trong thành phố Hồ Chí Minh"
+},{
+  "_id": {
+    "$oid": "64341a073584de4234068835"
+  },
+  "shipping_id": "ship004",
+  "shipping_carrier": "Ahamove",
+  "is_actived": true,
+  "notes": "Hỗ trợ giao hàng trong nội thành Hà Nội và TP.HCM"
+},{
+  "_id": {
+    "$oid": "64341a073584de4234068836"
+  },
+  "shipping_id": "ship005",
+  "shipping_carrier": "J&T Express",
+  "is_actived": true,
+  "notes": "Giao tới quầy lễ tân"
+},{
+  "_id": {
+    "$oid": "64341a073584de4234068837"
+  },
+  "shipping_id": "ship006",
+  "shipping_carrier": "Bưu điện VNPT",
+  "is_actived": false,
+  "notes": "Cần ký nhận khi nhận hàng"
+},{
+  "_id": {
+    "$oid": "64341a073584de4234068838"
+  },
+  "shipping_id": "ship007",
+  "shipping_carrier": "Bưu điện Việt Nam",
+  "is_actived": true,
+  "notes": "Giao tới cửa sau"
+},{
+  "_id": {
+    "$oid": "64341a073584de4234068839"
+  },
+  "shipping_id": "ship008",
+  "shipping_carrier": "Viettel Post",
+  "is_actived": true,
+  "notes": "Giao tới hàng xóm"
+},{
+  "_id": {
+    "$oid": "64341a073584de423406883a"
+  },
+  "shipping_id": "ship009",
+  "shipping_carrier": "Giao hàng GrabExpress",
+  "is_actived": false,
+  "notes": "Để hàng tại cửa"
+}]

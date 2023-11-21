@@ -1,0 +1,45 @@
+.banner-container--vertical {
+    width: 100%;
+    position: relative;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.banner-container--vertical .banner__img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.banner-container--vertical .banner-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 40px;
+    color: var(--dark);
+}
+
+.banner-container--vertical .banner__title {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+.banner-container--vertical .banner__value {
+    display: block;
+    margin-top: 10px;
+    font-size: 2.8rem;
+    color: var(--red);
+    font-weight: 700;
+}
+
+/* Các đoạn code CSS cho máy tính màn hình nhỏ ở đây */
+/* Độ rộng màn hình lớn hơn hoặc bằng 992px nhỏ hơn 1200 */
+@media screen and (max-width: 1200px) {}
+
+/* Các đoạn code CSS cho máy tính bảng ở đây */
+/* Độ rộng màn hình lớn hơn hoặc bằng 768px và nhỏ hơn 992px */
+@media screen and (max-width: 992px) {}
+
+/* Các đoạn code CSS cho điện thoại ở đây */
+/* Độ rộng màn hình nhỏ hơn hoặc bằng 767px */
+@media screen and (max-width: 768px) {}

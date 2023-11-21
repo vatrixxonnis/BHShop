@@ -1,0 +1,49 @@
+.coupon-noti {
+    margin-top: 30px;
+    background-color: #FFEEF2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 24px 24px;
+    border-radius: 7px;
+}
+
+.coupon-noti__content {
+    color: var(--red);
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+}
+
+.coupon-noti__content u {
+    font-weight: bold;
+}
+
+.coupon__code--fist {
+
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--red);
+    border: 1px dashed var(--red);
+    padding: 4px 1.25rem;
+    border-radius: 1.875rem;
+    margin: 0 0.9375rem;
+}
+
+
+/* Các đoạn code CSS cho máy tính màn hình nhỏ ở đây */
+/* Độ rộng màn hình lớn hơn hoặc bằng 992px nhỏ hơn 1200 */
+@media screen and (max-width: 1200px) {}
+
+/* Các đoạn code CSS cho máy tính bảng ở đây */
+/* Độ rộng màn hình lớn hơn hoặc bằng 768px và nhỏ hơn 992px */
+@media screen and (max-width: 992px) {
+    .coupon__code--fist {
+        display: inline-block;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+/* Các đoạn code CSS cho điện thoại ở đây */
+/* Độ rộng màn hình nhỏ hơn hoặc bằng 767px */
+@media screen and (max-width: 768px) {}

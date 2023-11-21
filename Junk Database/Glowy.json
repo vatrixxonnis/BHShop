@@ -1,0 +1,16 @@
+[{
+  "_id": {
+    "$oid": "648d2656df65560fcd5676ed"
+  },
+  "title": "https://glowy.web.app",
+  "content": "Đường dẫn server của Glowy Beauty",
+  "link": "https://c927-2001-ee1-d702-f800-cdc6-e799-d55a-770c.ngrok-free.app"
+},{
+  "_id": {
+    "$oid": "648d35dd2efcf703d67197c6"
+  },
+  "title": "https://localhost:4300",
+  "content": "Đường dẫn server của Local Host",
+  "link": "https://localhost:3000",
+  "__v": 0
+}]

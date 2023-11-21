@@ -1,0 +1,41 @@
+.home-container {
+    display: flex;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.home-col--right {
+    flex: 1;
+    min-width: 1px;
+    padding: 20px 0 20px 20px;
+}
+
+
+.new-products-container,
+.best-seller-container,
+.forweek {
+    margin-top: 40px;
+}
+
+/* Left Column */
+.home-banner--vertical .banner-container--vertical {
+    margin: 20px 0;
+}
+
+
+/* Các đoạn code CSS cho máy tính màn hình nhỏ ở đây */
+/* Độ rộng màn hình lớn hơn hoặc bằng 992px nhỏ hơn 1200 */
+@media screen and (max-width: 1200px) {}
+
+/* Các đoạn code CSS cho máy tính bảng ở đây */
+/* Độ rộng màn hình lớn hơn hoặc bằng 768px và nhỏ hơn 992px */
+@media screen and (max-width: 992px) {}
+
+/* Các đoạn code CSS cho điện thoại ở đây */
+/* Độ rộng màn hình nhỏ hơn hoặc bằng 767px */
+@media screen and (max-width: 768px) {
+    .home-col.home-col--right {
+        width: 100%;
+        padding-left: 0;
+    }
+}

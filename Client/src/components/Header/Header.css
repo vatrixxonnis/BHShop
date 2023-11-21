@@ -1,0 +1,193 @@
+.header-top {
+    display: flex;
+    border-bottom: 1px solid var(--color-border);
+    min-height: 42px;
+    font-size: 1.3rem;
+}
+
+.header-top .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-top__container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.header-top .ant-menu-horizontal {
+    border-bottom: none;
+    flex-wrap: wrap;
+}
+
+.header-top .ant-menu-light.ant-menu-horizontal > .ant-menu-item-selected::after {
+    border-bottom-color: transparent;
+}
+
+.header-top .ant-menu-light.ant-menu-horizontal > .ant-menu-submenu-open::after {
+    border-bottom-color: transparent;
+}
+
+.header-top .ant-menu-light.ant-menu-horizontal > .ant-menu-item:hover::after {
+    border-bottom-color: transparent;
+}
+
+.header-top__menu {
+    display: flex;
+}
+
+.header-top__container .col-right {
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.header-top .ant-menu-title-content:hover {
+    color: var(--color-primary);
+}
+
+.menu-top__item:not(:first-child) {
+    margin-left: 20px;
+}
+
+.header-main {
+    padding-top: 3rem;
+    padding-bottom: 1.5rem;
+}
+
+.header-main .col-center {
+    flex: 1;
+    margin: 0 60px;
+}
+
+.header-logo__site a img {
+    height: 50px;
+}
+
+.header-search {
+    margin-left: 20px;
+    position: relative;
+    flex: 1;
+}
+
+.search-table {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    display: block;
+}
+
+.logined-name {
+    color: var(--color-primary);
+}
+
+.logout-btn {
+    color: var(--danger);
+    margin-left: 10px;
+}
+
+.header-cart {
+    margin-left: 20px;
+    font-weight: 700;
+    align-items: center;
+}
+
+.header-cart:hover {
+    cursor: pointer;
+}
+
+.header-cart__badge {
+    background-color: #fff1ee;
+    width: 4.2rem;
+    height: 4.2rem;
+    border-radius: 50%;
+    margin-left: 2rem;
+}
+
+.header-cart__total {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-cart__total * {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.header-cart__tooltip {
+    min-width: 30rem;
+    max-width: 32rem;
+}
+
+/* Custom Tooltip */
+
+.header-nav__list {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--font-size);
+}
+
+/* Các đoạn code CSS cho máy tính màn hình nhỏ ở đây */
+/* Độ rộng màn hình lớn hơn hoặc bằng 992px nhỏ hơn 1200 */
+@media screen and (max-width: 1200px) {
+}
+
+/* Các đoạn code CSS cho máy tính bảng ở đây */
+/* Độ rộng màn hình lớn hơn hoặc bằng 768px và nhỏ hơn 992px */
+@media screen and (max-width: 992px) {
+    .header-location {
+        display: none;
+    }
+
+    .header-logo__site a img {
+        height: 30px;
+    }
+}
+
+/* Các đoạn code CSS cho điện thoại ở đây */
+/* Độ rộng màn hình nhỏ hơn hoặc bằng 767px */
+@media screen and (max-width: 768px) {
+    .home-container {
+        flex-direction: column;
+    }
+
+    .home-banner--vertical {
+        display: none;
+    }
+
+    .header-container .container {
+        flex-wrap: wrap;
+    }
+
+    .header-top__phone {
+        display: none;
+    }
+
+    .header-logo__site {
+        width: 100%;
+    }
+
+    .header-main .col-center {
+        margin: 0;
+    }
+
+    .header-main .container {
+        flex-direction: column;
+    }
+
+    .header-search {
+        width: 100%;
+        margin: 10px 20px 30px 20px;
+    }
+
+    .header-logo__site a img {
+        height: 50px;
+    }
+}

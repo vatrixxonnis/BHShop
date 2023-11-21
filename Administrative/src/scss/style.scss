@@ -1,0 +1,256 @@
+// If you want to override variables do it here
+@import "variables";
+
+$enable-ltr: true;
+$enable-rtl: true;
+
+// Import CoreUI for React components library
+@import "@coreui/coreui/scss/coreui";
+
+// Import Chart.js custom tooltips styles
+@import "@coreui/chartjs/scss/coreui-chartjs";
+
+@import "layout";
+@import "example";
+
+// If you want to add custom CSS you can put it here.
+@import "custom";
+.form-id {
+    flex: none;
+}
+
+.nutri_field {
+    flex: 1 !important;
+}
+
+.form-discount {
+    display: flex;
+    gap: 12px;
+}
+
+
+.form-upload__file {
+    min-width: 300px;
+    max-width: 600px;
+
+}
+.order-detail {
+    margin: 0 auto;
+    padding: 0 20px 20px;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+select {
+    /* -webkit-appearance: none; */
+    padding: 7px 20px 7px 8px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    background: #fff;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    transition: all 150ms ease;
+}
+
+select:required:invalid {
+    color: #5a667f;
+}
+
+select option {
+    color: #223254;
+}
+
+select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(0, 119, 255, 0.05);
+}
+
+.order-detail__total {
+    text-align: right
+}
+
+.order-detail__total .danger {
+    color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+    .order-detail {
+        padding: 10px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}
+/* Định dạng cho bảng */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Định dạng cho tiêu đề bảng (thead) */
+.table thead th {
+    background-color: #f8f8f8;
+    text-align: left;
+    padding: 8px;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Định dạng cho dòng dữ liệu trong bảng (tbody) */
+.table tbody td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Định dạng cho các nút thao tác */
+.button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    margin-right: 4px;
+    cursor: pointer;
+}
+
+/* Định dạng cho nút xóa */
+.button-delete {
+    background-color: #dc3545;
+}
+
+.order-product__item {
+    padding: 0 0 5px;
+    margin: 0;
+}
+
+.order-product__item {
+
+    font-weight: 500;
+    color: var(--color-primary);
+}
+
+.order_quantity {
+    color: gray;
+    font-weight: 300
+}
+
+.order-price__total {
+    color: var(--color-primary);
+    font-weight: 500;
+}
+.product-view_row {
+    opacity: 1;
+    transition: width 2s;
+}
+.revenue-group {
+    margin-bottom: 20px;
+}
+
+.revenue-heading {
+    color: var(--color-primary);
+}
+.review_star {}
+
+.form-action {
+    display: flex;
+    padding: 5px 0;
+    align-items: center;
+}
+
+.form-action .btn {
+    font-size: 10px;
+
+
+}
+
+.btn-spam {
+    color: var(--danger);
+    background-color: transparent;
+    border: 1px solid var(--danger);
+}
+
+.review_accept {
+    margin: 0 5px;
+}
+
+.review_status--spam {
+    color: var(--danger);
+}
+
+.review_status--pending {
+    color: var(--color-primary);
+}
+
+.review_status--accept {
+    color: var(--success);
+}
+
+.filter-button {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 4px 10px;
+    margin-right: 8px;
+    background-color: transparent;
+    color: #555;
+    transition: background-color 0.3s ease;
+}
+
+.filter-buttons__header {
+    margin-right: 20px;
+}
+
+.filter-button.active {
+    background-image: linear-gradient(45deg, var(--cui-info-start, #4d71fc) 0, var(--cui-info-stop, var(--color-primary) 100%)) !important;
+    color: #fff;
+    border-color: transparent
+}
+.user_active {
+    color: var(--success);
+}
+
+.status-icon {
+    margin-right: 5px;
+}
+
+.user_blocked {
+    color: var(--danger);
+}
+#logo-web img {
+    width: 60%;
+    filter: brightness(0) invert(1);
+    margin: 8px 0;
+}
+
+.error-login {
+    color: var(--danger);
+    display: inline-block;
+}
+
+.bg-primary {
+    background-image: linear-gradient(45deg, var(--cui-info-start, #4d71fc) 0, var(--cui-info-stop, var(--color-primary) 100%)) !important;
+}

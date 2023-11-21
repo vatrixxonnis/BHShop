@@ -1,0 +1,187 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --color-primary: #233a95;
+    --color-primary-50: rgba(35, 58, 149, 0.5);
+    --color-secondary: #2bbef9;
+    --size-border-radius: 7px;
+    --size-form-radius: 4px;
+    --font-primary: 'Noto Sans', sans-serif;
+    --font-secondary: 'Roboto', sans-serif;
+    --font-size: 1.5rem;
+    /* Color Root */
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #ff4d4f;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: rgba(5, 5, 5, 0.06);
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    /* component color */
+    --color-text: #202435;
+    --color-border: rgba(5, 5, 5, 0.06);
+    /* breakpoint */
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeSpeed;
+    font-size: 1.5rem;
+
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+/* Common CSS */
+
+a {
+    /* color: var(--color-text); */
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px 80px;
+
+}
+
+/* Custom Ant Design */
+.ant-menu-item-danger:hover.ant-menu-item-danger:after {
+    border-bottom-color: var(--red) !important;
+}
+
+/* Product */
+.product-item__name {
+    display: inline-block;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* số dòng hiển thị */
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    margin-bottom: 8px;
+    color: var(--color-text)
+}
+
+.product-item__price {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+/* Section */
+.section__title {
+    font-size: 2rem;
+    margin-bottom: 6px;
+    margin-top: 0;
+}
+
+.section__desc {
+    color: var(--secondary);
+    font-size: 1.3rem;
+}
+
+/* Product List */
+.products-list-wrapper {
+    justify-content: stretch;
+}
+
+.products-list-container {
+    margin-top: 40px;
+    color: var(--color-text);
+}
+
+
+.products-list__items {
+    display: grid;
+    margin-top: 24px;
+    gap: 14px;
+    grid-template-columns: repeat(auto-fit, minmax(218px, 1fr));
+    grid-auto-flow: dense;
+    overflow: hidden;
+}
+
+.products-list__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* product-item__name */
+.product-item__name {
+    overflow: hidden;
+}
+
+.ant-btn-primary.ant-btn-dangerous.ant-btn-background-ghost:not(:disabled):hover {
+    background-color: var(--danger) !important;
+}
+
+/* Các đoạn code CSS cho máy tính màn hình nhỏ ở đây */
+/* Độ rộng màn hình lớn hơn hoặc bằng 992px<=1200 */
+@media screen and (max-width: 1200px) {
+    .container {
+        padding: 0px 80px;
+    }
+}
+
+/* Các đoạn code CSS cho máy tính bảng ở đây */
+/* Độ rộng màn hình lớn hơn hoặc bằng 768px và nhỏ hơn 992px */
+@media screen and (max-width: 992px) {
+    .products-list__group {
+        margin-top: 20px;
+    }
+}
+
+/* Các đoạn code CSS cho điện thoại ở đây */
+/* Độ rộng màn hình nhỏ hơn hoặc bằng 767px */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0px 20px;
+    }
+
+    .products-list__group {
+        margin-top: 10px;
+    }
+}

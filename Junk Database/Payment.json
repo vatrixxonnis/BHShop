@@ -1,0 +1,91 @@
+[{
+  "_id": {
+    "$oid": "6411a39b37a2db2927a2aa91"
+  },
+  "payment_method_id": "pm001",
+  "payment_method_name": "Thanh toán qua thẻ tín dụng",
+  "card_type": "Visa",
+  "description": "Thanh toán bằng thẻ tín dụng Visa",
+  "is_active": true
+},{
+  "_id": {
+    "$oid": "6411a39b37a2db2927a2aa92"
+  },
+  "payment_method_id": "pm002",
+  "payment_method_name": "Thanh toán qua thẻ ATM nội địa",
+  "card_type": "Ngân hàng Vietcombank",
+  "description": "Thanh toán bằng thẻ ATM nội địa của Vietcombank",
+  "is_active": true
+},{
+  "_id": {
+    "$oid": "6411a39b37a2db2927a2aa93"
+  },
+  "payment_method_id": "pm003",
+  "payment_method_name": "Thanh toán qua thẻ Mastercard",
+  "card_type": "Mastercard",
+  "description": "Thanh toán bằng thẻ tín dụng Mastercard",
+  "is_active": true
+},{
+  "_id": {
+    "$oid": "6411a39b37a2db2927a2aa94"
+  },
+  "payment_method_id": "pm004",
+  "payment_method_name": "Thanh toán bằng ví điện tử Momo",
+  "card_type": "Momo",
+  "description": "Thanh toán bằng ví điện tử Momo",
+  "is_active": true
+},{
+  "_id": {
+    "$oid": "6411a39b37a2db2927a2aa95"
+  },
+  "payment_method_id": "pm005",
+  "payment_method_name": "Thanh toán qua Paypal",
+  "card_type": "Paypal",
+  "description": "Thanh toán bằng tài khoản Paypal",
+  "is_active": true
+},{
+  "_id": {
+    "$oid": "6411a39b37a2db2927a2aa96"
+  },
+  "payment_method_id": "pm006",
+  "payment_method_name": "Thanh toán qua ZaloPay",
+  "card_type": "ZaloPay",
+  "description": "Thanh toán bằng ví điện tử ZaloPay",
+  "is_active": true
+},{
+  "_id": {
+    "$oid": "6411a39b37a2db2927a2aa97"
+  },
+  "payment_method_id": "pm007",
+  "payment_method_name": "Thanh toán qua AirPay",
+  "card_type": "AirPay",
+  "description": "Thanh toán bằng ví điện tử AirPay",
+  "is_active": true
+},{
+  "_id": {
+    "$oid": "6411a39b37a2db2927a2aa98"
+  },
+  "payment_method_id": "pm008",
+  "payment_method_name": "Thanh toán khi nhận hàng (COD)",
+  "card_type": "Tiền mặt",
+  "description": "Thanh toán khi nhận hàng tại nhà",
+  "is_active": true
+},{
+  "_id": {
+    "$oid": "6411a39b37a2db2927a2aa99"
+  },
+  "payment_method_id": "pm009",
+  "payment_method_name": "Chuyển khoản ngân hàng",
+  "card_type": "Ngân hàng ABC",
+  "description": "Thanh toán bằng chuyển khoản ngân hàng ABC",
+  "is_active": true
+},{
+  "_id": {
+    "$oid": "6411a39b37a2db2927a2aa9a"
+  },
+  "payment_method_id": "pm010",
+  "payment_method_name": "Thanh toán qua VNPAY",
+  "card_type": "VNPAY",
+  "description": "Thanh toán bằng VNPAY",
+  "is_active": true
+}]

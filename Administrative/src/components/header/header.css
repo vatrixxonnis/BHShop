@@ -1,0 +1,10 @@
+.admin-user__hello {
+    background: -webkit-linear-gradient(#6479ff, var(--color-primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 500;
+}
+
+.logout-button {
+    cursor: pointer;
+}
