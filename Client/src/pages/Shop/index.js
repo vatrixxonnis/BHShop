@@ -86,7 +86,7 @@ function Shop() {
     const { name } = state || {};
     useEffect(() => {
         // Read values passed on state
-        if (name !== {}) {
+        if (name !== null && name !== undefined) {
             setFilterParams({
                 ...filterParams,
                 categories: [name],

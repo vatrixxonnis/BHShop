@@ -44,7 +44,7 @@ export default function userReducer(state = initialState, action) {
                 (x) => x._id === payload._id,
             );
             console.log(index);
-            if (index == -1) {
+            if (index === -1) {
                 return {
                     ...state,
                     wishListItems: [...state.wishListItems, { ...payload }],

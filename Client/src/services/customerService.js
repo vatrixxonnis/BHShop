@@ -1,12 +1,5 @@
 import axios from 'axios';
 
-let serverUrl = '';
-if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-    serverUrl = 'http://127.0.0.1:3100';
-} else {
-    serverUrl = process.env.REACT_APP_SERVER_URL;
-}
-
 const errorHandler = (err) => {
     console.log(err);
 };
@@ -14,7 +7,7 @@ const errorHandler = (err) => {
 const customerService = {
     getCustomer: async (user_id) => {
         const response = await axios
-            .post(`${serverUrl}/customers/user_id`, {
+            .post(`${process.env.REACT_APP_SERVER_URL}/customers/user_id`, {
                 user_id: user_id,
             })
             .catch(errorHandler);
@@ -22,13 +15,15 @@ const customerService = {
     },
     getWishlist: async (id) => {
         const response = await axios
-            .post(`${serverUrl}/customers/wishlist`, { user_id: id })
+            .post(`${process.env.REACT_APP_SERVER_URL}/customers/wishlist`, {
+                user_id: id,
+            })
             .catch(errorHandler);
         return response;
     },
     addToWishlist: async (user_id, product) => {
         const response = await axios
-            .post(`${serverUrl}/customers/wishlist/add`, {
+            .post(`${process.env.REACT_APP_SERVER_URL}/customers/wishlist/add`, {
                 user_id: user_id,
                 product: product,
             })
@@ -37,7 +32,7 @@ const customerService = {
     },
     removeFromWishlist: async (user_id, product) => {
         const response = await axios
-            .post(`${serverUrl}/customers/wishlist/remove`, {
+            .post(`${process.env.REACT_APP_SERVER_URL}/customers/wishlist/remove`, {
                 user_id: user_id,
                 product: product,
             })

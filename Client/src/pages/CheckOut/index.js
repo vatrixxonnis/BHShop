@@ -1,14 +1,12 @@
 import './CheckOut.css';
 import { useEffect, useState } from 'react';
 import { connect, useSelector } from 'react-redux';
-import { updateQuantity, updateTotalPrice, removeFromCart } from '@/actions/cartActions';
 import { setCustomerAddresses } from '@/actions/customerActions';
-import { SmileOutlined, GiftOutlined } from '@ant-design/icons';
+import { GiftOutlined } from '@ant-design/icons';
 import {
     Form,
     Input,
     Mentions,
-    Select,
     Progress,
     Divider,
     Checkbox,
@@ -30,7 +28,6 @@ function CheckOut(props) {
     const allTotalPrice = cartItems.reduce((acc, item) => {
         return acc + item.price * item.quantity;
     }, 0);
-    const { Option } = Select;
     const [form] = Form.useForm();
     const [agree, setAgree] = useState(false);
     const onAgreeChange = (e) => {

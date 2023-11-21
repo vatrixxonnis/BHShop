@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Input, Button, Result } from 'antd';
 import OrderTracking from '@/components/OrderTracking';
-import orderService from '@/services/orderService.js';
 import './Tracking.css';
 function Tracking() {
     const onSearchChange = (e) => {

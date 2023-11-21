@@ -1,30 +1,25 @@
 import axios from 'axios';
 
-let serverUrl = '';
-if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-    serverUrl = 'http://127.0.0.1:3100';
-} else {
-    serverUrl = process.env.REACT_APP_SERVER_URL;
-}
-
 const errorHandler = (err) => {
     console.log(err);
 };
 
 const productService = {
     getAllProduct: async () => {
-        const response = await axios.get(`${serverUrl}/products`).catch(errorHandler);
+        const response = await axios
+            .get(`${process.env.REACT_APP_SERVER_URL}/products`)
+            .catch(errorHandler);
         return response;
     },
     getProduct: async (id) => {
         const response = await axios
-            .get(`${serverUrl}/products/${id}`)
+            .get(`${process.env.REACT_APP_SERVER_URL}/products/${id}`)
             .catch(errorHandler);
         return response;
     },
     getAllProductWithOnlyName: async () => {
         const response = await axios
-            .post(`${serverUrl}/products/allWithOnlyName`)
+            .post(`${process.env.REACT_APP_SERVER_URL}/products/allWithOnlyName`)
             .catch(errorHandler);
         return response;
     },

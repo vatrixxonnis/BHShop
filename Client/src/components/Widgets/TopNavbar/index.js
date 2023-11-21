@@ -241,7 +241,6 @@ function TopNavbar() {
     const [current, setCurrent] = useState('home');
 
     const onClick = (e) => {
-        console.log('click ', e);
         setCurrent(e.key);
     };
     return (

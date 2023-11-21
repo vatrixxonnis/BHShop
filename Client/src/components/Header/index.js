@@ -121,7 +121,6 @@ function Header() {
     // Count of Cart Items
     let cartBadge = cartItems.length;
     // Format Money
-    // const navLeft: MenuProps['items'] = [
     const navLeft = [
         {
             label: (

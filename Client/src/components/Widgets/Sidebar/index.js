@@ -1,5 +1,4 @@
 import { Menu, Col } from 'antd';
-import { MenuProps } from 'antd/es/menu';
 import './Sidebar.css';
 import { useNavigate } from 'react-router-dom';
 function Sidebar() {

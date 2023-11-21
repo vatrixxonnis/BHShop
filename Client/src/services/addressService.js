@@ -1,12 +1,5 @@
 import axios from 'axios';
 
-let serverUrl = '';
-if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-    serverUrl = 'http://127.0.0.1:3100';
-} else {
-    serverUrl = process.env.REACT_APP_SERVER_URL;
-}
-
 const errorHandler = (err) => {
     console.log(err);
 };
@@ -14,7 +7,7 @@ const errorHandler = (err) => {
 const addressService = {
     getProvinceName: async (provinceId) => {
         const response = await axios
-            .post(`${serverUrl}/provinceName`, {
+            .post(`${process.env.REACT_APP_SERVER_URL}/provinceName`, {
                 code: provinceId,
             })
             .catch(errorHandler);
@@ -22,7 +15,7 @@ const addressService = {
     },
     getDistrictName: async (provinceId) => {
         const response = await axios
-            .post(`${serverUrl}/districtName`, {
+            .post(`${process.env.REACT_APP_SERVER_URL}/districtName`, {
                 code: provinceId,
             })
             .catch(errorHandler);
@@ -30,7 +23,7 @@ const addressService = {
     },
     getWardName: async (wardId) => {
         const response = await axios
-            .post(`${serverUrl}/wardName`, {
+            .post(`${process.env.REACT_APP_SERVER_URL}/wardName`, {
                 code: wardId,
             })
             .catch(errorHandler);
