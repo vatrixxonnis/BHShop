@@ -6,6 +6,18 @@ const morgan = require("morgan");
 app.use(express.static("public"));
 app.use(morgan("combined"));
 
+// Gzip compressing can greatly decrease the size of the response body
+const compression = require("compression");
+app.use(compression())
+
+// Helmet can help protect your app from some well-known web vulnerabilities by setting HTTP headers appropriately.
+const helmet = require("helmet");
+app.use(helmet.contentSecurityPolicy({
+  directives: {
+    "script-src": ["'self'", "code.jquery.com", "cdn.jsdelivr.net"],
+  }
+}));
+
 const cors = require("cors");
 app.use(
   cors({
@@ -28,8 +40,8 @@ app.use(
   })
 );
 
-// const db = require("./config/db");
-// db.connect();
+const db = require("./config/database/index.js");
+db.connect();
 
 const routes = require("./routes/router.js");
 const productRoutes = require("./routes/productRouter.js");
@@ -42,7 +54,7 @@ const paymentRoutes = require("./routes/paymentRouter.js");
 const reviewRoutes = require("./routes/reviewRouter");
 const couponRoutes = require("./routes/couponRouter");
 const newsRoutes = require("./routes/newsRouter.js");
-// const ueldailyRouter = require("./routes/ueldailyRouter.js");
+const ueldailyRouter = require("./routes/ueldailyRouter.js");
 const glowyRouter = require("./routes/glowyRouter.js");
 
 app.use("/", routes);
@@ -56,10 +68,9 @@ app.use("/payments", paymentRoutes);
 app.use("/reviews", reviewRoutes);
 app.use("/newsletters", newsRoutes);
 app.use("/coupons", couponRoutes);
-// app.use("/ueldaily", ueldailyRouter);
+app.use("/ueldaily", ueldailyRouter);
 app.use("/glowy", glowyRouter);
-// Import middleware
-// const accessLogsMiddleware = require("./middleware/accessLog");
+
 // const salt = crypto.randomBytes(16).toString("hex"); // create salt
 // const hash = crypto
 //   .pbkdf2Sync("BHShop123@", salt, 1000, 64, "sha512")
@@ -68,21 +79,8 @@ app.use("/glowy", glowyRouter);
 // console.log("Salt:", salt);
 // console.log("Hash:", hash);
 
-// Apply middleware
-// app.use(accessLogsMiddleware);
 app.listen(port, () => {
   console.log(
     `My server is listening on port ${port}. The address is http://localhost:${port}`
   );
 });
-
-// Prevent Render from sleeping
-const selfPing = require('./middleware/self-ping.js');
-const cron = require('node-cron');
-const preventSleep = cron.schedule('5,19,33,47,1 * * * *', () => {
-  selfPing.handler();
-},{
-  scheduled: false,
-});
-
-preventSleep.start();

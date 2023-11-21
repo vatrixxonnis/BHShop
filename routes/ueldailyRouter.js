@@ -1,31 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const ueldailyRouter = express.Router();
-const crypto = require("node:crypto");
-const { uuid } = require("uuidv4");
-const createError = require("http-errors");
 
-// Retry Fetch
-function wait(delay) {
-  return new Promise((resolve) => setTimeout(resolve, delay));
-}
-
-async function fetchRetry(url, delay = 3000, tries = 5, fetchOptions = {}) {
-  function onError(err) {
-    triesLeft = tries - 1;
-    if (!triesLeft) {
-      throw err;
-    }
-    return wait(delay).then(() =>
-      fetchRetry(url, delay, triesLeft, fetchOptions)
-    );
-  }
-  try {
-    return await fetch(url, fetchOptions);
-  } catch (err_1) {
-    return onError(err_1);
-  }
-}
+const uelMainNews = require("../data/uelMainNews.json");
 
 ueldailyRouter.get("/fetchAllActivitiesWithCheerio", async (req, res) => {
   const puppeteer = require("puppeteer");
@@ -148,7 +125,12 @@ ueldailyRouter.get("/cheerio", async (req, res, next) => {
   $(".nd_news > div").each(function (i, div) {
     let title = $("h4 > a", div).text();
     // let time = $("h4 > span", div).text().slice(1, -1).replace(/\//g, "-");
-    let time = $("h4 > span", div).text().slice(1, -1).split("/").reverse().join("-");
+    let time = $("h4 > span", div)
+      .text()
+      .slice(1, -1)
+      .split("/")
+      .reverse()
+      .join("-");
     let description = $("h3.h3_content", div).text().trim();
     let imageURL = baseURL + $("img", div).attr("src");
     let link = baseURL + $("h4 > a", div).attr("href");
@@ -162,8 +144,6 @@ ueldailyRouter.get("/cheerio", async (req, res, next) => {
   });
   return res.send(newsItemHolder);
 });
-
-const uelMainNews = require("../data/uelMainNews.json");
 
 const isStalled = () => {
   const fs = require("fs");
@@ -216,7 +196,7 @@ const updateLatest = async () => {
     if (date1.getTime() === date2.getTime()) return true;
     return false;
   });
-  while(index !== -1) {
+  while (index !== -1) {
     index--;
     if (index < 0) break;
     uelMainNews.unshift(htmlNode[index]);
@@ -227,12 +207,33 @@ const updateLatest = async () => {
     path.join(__dirname, "../data/uelMainNews.json"),
     JSON.stringify(uelMainNews)
   );
-  return;  
+  return;
 };
-updateLatest();
 
 ueldailyRouter.get("/allMainNews", async (req, res, next) => {
   res.json(uelMainNews);
 });
+
+// Retry Fetch
+function wait(delay) {
+  return new Promise((resolve) => setTimeout(resolve, delay));
+}
+
+async function fetchRetry(url, delay = 3000, tries = 5, fetchOptions = {}) {
+  function onError(err) {
+    triesLeft = tries - 1;
+    if (!triesLeft) {
+      throw err;
+    }
+    return wait(delay).then(() =>
+      fetchRetry(url, delay, triesLeft, fetchOptions)
+    );
+  }
+  try {
+    return await fetch(url, fetchOptions);
+  } catch (err_1) {
+    return onError(err_1);
+  }
+}
 
 module.exports = ueldailyRouter;
