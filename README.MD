@@ -2,6 +2,7 @@
 =======
 *This is BHShop guideline, please skip these if you don't want any headaches in the near future* 
 
+https://github.com/vatrixxonnis/UELDaily/assets/79963761/93707eca-b7ca-4c71-a925-94b579164607
 
 # Getting Started with Create React App
 
