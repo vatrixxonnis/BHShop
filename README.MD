@@ -4,6 +4,8 @@
 
 https://github.com/vatrixxonnis/UELDaily/assets/79963761/93707eca-b7ca-4c71-a925-94b579164607
 
+# <p align="center"> Try it yourself at: https://bhshop-qgif.onrender.com </p>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
